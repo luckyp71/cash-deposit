@@ -51,7 +51,7 @@ func SendEmail(userName string, accountNumber string) {
 
 	log.Println(smtpServer.host)
 	// Setup auth
-	auth := smtp.PlainAuth("leazzyanalytics@gmail.com", mail.senderId, "testpassword", smtpServer.host)
+	auth := smtp.PlainAuth("leazzyanalytics@gmail.com", mail.senderId, "indonesia1945", smtpServer.host)
 
 	// Gmail will reject connection if it's not secure
 	// TLS config

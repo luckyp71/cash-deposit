@@ -23,7 +23,7 @@ var customer m.Customer
 var result m.Result
 
 func Router() {
-	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=postgres sslmode=disable")
 	if e != nil {
 		fmt.Println(e)
 	} else {
@@ -48,7 +48,7 @@ func Router() {
 
 // DB Configuration for unit testing
 func DbConfig() {
-	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=postgres sslmode=disable")
 	if e != nil {
 		fmt.Println(e)
 	} else {

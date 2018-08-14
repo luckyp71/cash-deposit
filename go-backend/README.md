@@ -5,9 +5,10 @@
 <p>2. Create Kafka's topic named cash_deposit</p>
 <p>3. Run those three Kafka's broker</p>
 <p>4. Run <a href="./messages/consumer/kafka-consumer.go">this Kafka's consumer</a> and please ensure that your email and DB credentials are correct</p> 
-<p>5. Create bank user by invoking RESTful web service with <a href="./assets/Create Bank User Payload.png"> this payload</a> for example </p> 
-<p>6. Invoke deposit service (If the customer doesn't exist, the service will register the new customer) with <a href="./assets/Deposit Payload.png">this payload</a> for example</p>
-<p>7. Get transaction history of <a href="./assets/Transaction History of Customers Payload.png">customers</a> or <a href="./assets/Transaction History by Account Number.png">related customer</a>.</p> 
+<p>5. Run the main.go file in the root directory</p>
+<p>6. Create bank user by invoking RESTful web service with <a href="./assets/Create Bank User Payload.png"> this payload</a> for example </p> 
+<p>7. Invoke deposit service (If the customer doesn't exist, the service will register the new customer) with <a href="./assets/Deposit Payload.png">this payload</a> for example</p>
+<p>8. Get transaction history of <a href="./assets/Transaction History of Customers Payload.png">customers</a> or <a href="./assets/Transaction History by Account Number.png">related customer</a>.</p> 
 
 <h3>Prerequisite:</h3>
 <p>1. Golang</p>

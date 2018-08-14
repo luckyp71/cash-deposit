@@ -25,7 +25,7 @@ var bankUser models.BankUser
 var customer models.Customer
 
 func main() {
-	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=testpassword sslmode=disable")
+	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=postgres sslmode=disable")
 	if e != nil {
 		log.Fatal(e)
 	}
@@ -42,7 +42,6 @@ func consumeMessage() {
 	config := sarama.NewConfig()
 	config.Producer.Partitioner = sarama.NewManualPartitioner
 	config.Consumer.Return.Errors = true
-
 	brokers := []string{BROKER1, BROKER2, BROKER3}
 
 	consumer, err := sarama.NewConsumer(brokers, config)
@@ -66,14 +65,17 @@ func consumeMessage() {
 		customer = models.Customer{AccountNumber: customer.AccountNumber, CustomerName: customer.CustomerName,
 			UserAcc: customer.UserAcc, DepositAccounts: customer.DepositAccounts}
 
-		if e := db.Where("account_number = ?", customer.AccountNumber).First(&customer).Error; e != nil {
-			db.Create(&customer)
+		//		if e := db.Debug().Where("user_account=?", customer.UserAcc).Preload("Customers").First(&bankUser).Error; e != nil {
+		//			log.Fatal(e)
+		//		} else {
+		if e := db.Debug().Where("account_number = ?", customer.AccountNumber).First(&customer).Error; e != nil {
+			db.Debug().Create(&customer)
 		} else {
-			db.Save(&customer)
+			db.Debug().Save(&customer)
 		}
 		log.Println("Deposit executed successfully")
 		mail.SendEmail(bankUser.UserName, customer.AccountNumber)
-
+		//}
 	}
 
 }
