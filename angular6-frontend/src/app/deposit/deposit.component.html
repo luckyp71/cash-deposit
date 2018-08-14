@@ -1,3 +1,42 @@
-<p>
-  deposit works!
-</p>
+<form>
+<div>
+  <mat-form-field class="deposit">
+    <input matInput #accountNumber placeholder="Account Number"/>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field class="deposit">
+    <input matInput #customerName placeholder="Customer Name"/>
+  </mat-form-field>
+</div>
+
+<div>
+<mat-form-field class="deposit">
+  <input matInput #userAcc placeholder="User Account"/>
+</mat-form-field>
+</div>
+
+<div>
+  <mat-form-field class="deposit">
+    <input matInput #trxNumber placeholder="Transaction Number"/>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field class="deposit">
+    <input matInput #amount placeholder="Amount"/>
+  </mat-form-field>
+</div>
+
+    <!-- <button mat-icon-button  (click)="getOpinionsByKeyword(keyword.value)"> -->
+    <!-- <button mat-raised-button> -->
+  <!-- <mat-icon color="primary" class="btn-search">search</mat-icon> -->
+      <!-- </button> -->
+
+      <button mat-raised-button  (click)="getOpinionsByKeyword(keyword.value)">
+      <!-- <button mat-raised-button> -->
+    <!-- <mat-icon color="primary" class="btn-search">search</mat-icon> -->
+        Deposit
+        </button>
+</form>

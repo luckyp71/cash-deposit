@@ -1,0 +1,40 @@
+.fixed-header {
+  top: 0;
+  position: fixed;
+  z-index:999;
+
+}
+
+.app-title{
+  margin-left: 7pt;
+  font-size: 20pt;
+}
+
+.fill-remaining-space{
+  flex: 1 1 auto;
+}
+
+.container {
+  position: fixed;
+  height: 80%%;
+  margin-top: 48pt  ;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+
+.side-color{
+    background: #f4f4f4;
+  color: #000;
+}
+
+.side-button{
+  margin-top: 1pt;
+  width: 100%;
+  color: #000;
+  align-items: flex-start;
+  text-align: left;
+  background: #f4f4f4;
+}

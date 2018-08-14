@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DepositService } from '../deposit.service';
+import { Customer } from '../customer';
 
 @Component({
   selector: 'app-customers',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor() { }
+  customers: Customer[];
+
+  constructor(private depositService: DepositService) { }
 
   ngOnInit() {
+    this.getCustomersTrasactionHistory();
+  }
+
+  getCustomersTrasactionHistory(): void {
+    this.depositService.getCustomersTrasactionHistory()
+      .subscribe(data => this.customers = data);
   }
 
 }

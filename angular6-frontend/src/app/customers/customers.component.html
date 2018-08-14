@@ -1,3 +1,12 @@
-<p>
-  customers works!
-</p>
+<div *ngIf="customers">
+<h4>Customer Transactions List</h4>  
+<ul *ngFor="let customer of customers">
+  <li>{{customer.account_number}}</li>
+  <li>{{customer.customer_name}}</li>
+  <li>{{customer.user_acc}}</li>
+  <ul *ngFor="let deposit_account of customer.deposit_accounts">
+    <li>{{deposit_account.trx_number}}</li>
+    <li>{{deposit_account.amount}}</li>
+  </ul>
+</ul>
+</div>

@@ -7,21 +7,30 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { DepositComponent } from './deposit/deposit.component';
 import { MessagesComponent } from './messages/messages.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { SearchTransactionComponent } from './search-transaction/search-transaction.component';
+import { MaterialModule } from './material/material.module';
+import { DepositService } from './deposit.service';
+import { MessageService } from './message.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
     CustomersComponent,
     CustomerDetailComponent,
     DepositComponent,
-    MessagesComponent
+    MessagesComponent,
+    SearchTransactionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MaterialModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [DepositService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

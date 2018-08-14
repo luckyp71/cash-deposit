@@ -20,9 +20,10 @@ var e error
 var deposit m.DepositAccount
 var bankUser m.BankUser
 var customer m.Customer
+var result m.Result
 
 func Router() {
-	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
 	if e != nil {
 		fmt.Println(e)
 	} else {
@@ -38,6 +39,7 @@ func Router() {
 	sub.HandleFunc("", PostDeposit).Methods("POST")
 	sub.HandleFunc("/users", CreateBankUser).Methods("POST")
 	sub.HandleFunc("", GetCustomersDeposit).Methods("GET")
+	sub.HandleFunc("/balance/{account_number}", GetTotalBalanceByAccountNumber).Methods("GET")
 	sub.HandleFunc("/detail/{account_number}", GetCustomerDepositByAccountNumber).Methods("GET")
 	log.Fatal(http.ListenAndServe(":8080", handlers.CORS(handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization"}),
 		handlers.AllowedMethods([]string{"GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS"}),
@@ -117,7 +119,7 @@ func GetCustomersDeposit(w http.ResponseWriter, r *http.Request) {
 func GetCustomerDepositByAccountNumber(w http.ResponseWriter, r *http.Request) {
 	var customer m.Customer
 	param := mux.Vars(r)
-	if e := db.Where("account_number = ?", param["account_number"]).Preload("DepositAccounts").Find(&customer).Error; e != nil {
+	if e := db.Where("account_number = ?", param["account_number"]).Preload("DepositAccounts").First(&customer).Error; e != nil {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Response-Code", "06")
 		w.Header().Set("Response-Desc", "Data Not Found")
@@ -129,5 +131,24 @@ func GetCustomerDepositByAccountNumber(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Response-Desc", "Success")
 		w.WriteHeader(http.StatusOK)
 		json.NewEncoder(w).Encode(&customer)
+	}
+}
+
+// Get total balance of customer by account number
+func GetTotalBalanceByAccountNumber(w http.ResponseWriter, r *http.Request) {
+	var results m.Result
+	param := mux.Vars(r)
+	//	if e := db.Table("deposit_account").Select("acc_number, sum(amount) as total").Group("acc_number").Having("acc_number = ? ", param["account_number"]).Scan(&results).Error; e != nil {
+	if e := db.Table("deposit_account").Select("sum(amount) as total").Group("acc_number").Having("acc_number = ? ", param["account_number"]).Scan(&results).Error; e != nil {
+		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Response-Code", "06")
+		w.Header().Set("Response-Desc", "Data Not Found")
+		w.WriteHeader(http.StatusNotFound)
+	} else {
+		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Response-Code", "00")
+		w.Header().Set("Response-Desc", "Success")
+		w.WriteHeader(http.StatusOK)
+		json.NewEncoder(w).Encode(&results)
 	}
 }

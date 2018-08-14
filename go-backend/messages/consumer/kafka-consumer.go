@@ -70,11 +70,12 @@ func consumeMessage() {
 		if e := db.Where("user_account = ?", customer.UserAcc).Preload("Customers").First(&bankUser).Error; e != nil {
 			log.Println("Record Not Found!!!")
 		} else {
-			if e := db.Where("account_number = ?", customer.AccountNumber).Preload("DepositAccounts").First(&customer).Error; e != nil {
+			if e := db.Where("account_number = ?", customer.AccountNumber).First(&customer).Error; e != nil {
 				db.Create(&customer)
 			} else {
 				db.Save(&customer)
 			}
+			log.Println("Deposit executed successfully")
 			mail.SendEmail(bankUser.UserName, customer.AccountNumber)
 		}
 
