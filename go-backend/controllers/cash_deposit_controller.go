@@ -82,23 +82,24 @@ func PostDeposit(w http.ResponseWriter, r *http.Request) {
 	} else {
 		c.ProduceMessage(customer)
 		// Check wheter the customer exists, if so the http status will return status ok otherwise it returns status not found
-		if e := db.Where("user_account = ?", customer.UserAcc).Preload("Customers").First(&bankUser).Error; e != nil {
-			log.Println("Record Not Found!!!")
-			w.Header().Set("Content-Type", "application/json")
-			w.Header().Set("Response-Code", "06")
-			w.Header().Set("Response-Desc", "Record Not Found")
-			w.WriteHeader(http.StatusNotFound)
-		} else {
-			w.Header().Set("Content-Type", "application/json")
-			w.Header().Set("Reponse-Code", "00")
-			w.Header().Set("Response-Desc", "success")
-			w.WriteHeader(http.StatusOK)
-			json.NewEncoder(w).Encode(&customer)
-		}
+		//		if e := db.Where("user_account = ?", customer.UserAcc).First(&bankUser).Error; e != nil {
+		//			log.Println("Record Not Found!!!")
+		//			w.Header().Set("Content-Type", "application/json")
+		//			w.Header().Set("Response-Code", "06")
+		//			w.Header().Set("Response-Desc", "Record Not Found")
+		//			w.WriteHeader(http.StatusNotFound)
+		//		} else {
+		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Reponse-Code", "00")
+		w.Header().Set("Response-Desc", "success")
+		w.WriteHeader(http.StatusOK)
+		json.NewEncoder(w).Encode(&customer)
 	}
 }
 
-// Get history of customers deposit account
+//}
+
+// Get customers' transaction history
 func GetCustomersDeposit(w http.ResponseWriter, r *http.Request) {
 	var customers []m.Customer
 	if e := db.Preload("DepositAccounts").Find(&customers).Error; e != nil {
@@ -115,7 +116,7 @@ func GetCustomersDeposit(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// Get history of customer's deposit account by customer's account number
+// Get customer's transaction history by account number
 func GetCustomerDepositByAccountNumber(w http.ResponseWriter, r *http.Request) {
 	var customer m.Customer
 	param := mux.Vars(r)

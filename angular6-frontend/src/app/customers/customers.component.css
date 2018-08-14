@@ -1,0 +1,10 @@
+.mat-elevation-z8{
+  margin: 10pt;
+}
+
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  margin: inherit;
+}

@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BankUser } from './bank-user'
 import { Customer } from './customer';
 import { DepositAccount } from './deposit-account';
+import { Result } from './result';
 import { MessageService } from './message.service';
 
 const httpOptions = {
@@ -36,20 +37,41 @@ export class DepositService {
 
   // Get transaction history of Customers
   getCustomersTrasactionHistory(): Observable<Customer[]> {
-  return this.http.get<Customer[]>(this.depositServiceUrl).
-  pipe(
-    tap(_ => this.log(`Get transaction history of all customers`)),
-    catchError(this.handleError<Customer[]>('Get transaction history of all customers', []))
-  );
+    return this.http.get<Customer[]>(this.depositServiceUrl)
+      .pipe(
+          tap(_ => this.log(`Get transaction history of all customers`)),
+          catchError(this.handleError<Customer[]>('Get transaction history of all customers', []))
+        );
+}
+
+  // Get transaction history by account Number
+  getTHByAccountNumber(account_number: string): Observable<Customer> {
+    const url = `${this.depositServiceUrl}/detail/${account_number}`;
+    return this.http.get<Customer>(url)
+      .pipe(
+        tap(_ => this.log(`Get customer's transaction history by account number: ${account_number}`)),
+        catchError(this.handleError<Customer>(`Get customer's transaction history by account number`))
+      );
+}
+
+  // Get total balance of customer by account number
+  GetTotalBalanceByAccountNumber(account_number: string): Observable<Result> {
+    const url = `${this.depositServiceUrl}/balance/${account_number}`;
+    return this.http.get<Result>(url).
+      pipe(
+        tap(_ => this.log(`Get total balance by account number`)),
+      catchError(this.handleError<Result>(`Get total balance by account number`))
+    );
 }
 
   // User (bank officer / user) Registration
   createBankOfficer(bo: BankUser): Observable<BankUser> {
-  return this.http.post<BankUser>(this.depositServiceUrl, BankUser, httpOptions)
+  const url = `${this.depositServiceUrl}/users`;
+  return this.http.post<BankUser>(url, bo, httpOptions)
     .pipe(
-      tap((bu: BankUser) => this.log(`Create new bank officer with account no: ${bu.user_account}`)),
+      tap((bu: BankUser) => this.log(`Create new bank officer with account no: ${bo.user_account}`)),
       catchError(this.handleError<BankUser>('create bank officer'))
-    )
+    );
 }
 
   // Post Deposit
@@ -60,5 +82,7 @@ export class DepositService {
       catchError(this.handleError<Customer>('Deposit'))
     );
 }
+
+
 
 }

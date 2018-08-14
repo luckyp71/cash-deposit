@@ -28,9 +28,9 @@ func Router() *mux.Router {
 func TestPostDeposit(t *testing.T) {
 	c.DbConfig()
 	customer := m.Customer{
-		AccountNumber: "124",
+		AccountNumber: "2222",
 		CustomerName:  "Customer 2",
-		UserAcc:       "123456",
+		UserAcc:       "4321",
 	}
 	jsonUser, _ := json.Marshal(customer)
 	request, _ := http.NewRequest("POST", "/cash_deposit", bytes.NewBuffer(jsonUser))
@@ -43,7 +43,7 @@ func TestPostDeposit(t *testing.T) {
 func TestCreateBankUser(t *testing.T) {
 	c.DbConfig()
 	bankUser := m.BankUser{
-		UserAccount: "12365432",
+		UserAccount: "41212",
 		UserName:    "luckypratamma",
 		Password:    "pratama",
 	}
@@ -66,7 +66,7 @@ func TestGetCustomersDeposit(t *testing.T) {
 // Test get customer deposit by account number
 func TestGetCustomerDepositByAccountNumber(t *testing.T) {
 	c.DbConfig()
-	request, _ := http.NewRequest("GET", "/cash_deposit/detail/123", nil)
+	request, _ := http.NewRequest("GET", "/cash_deposit/detail/1234", nil)
 	response := httptest.NewRecorder()
 	Router().ServeHTTP(response, request)
 	assert.Equal(t, http.StatusOK, response.Code, "OK response is expected")
@@ -75,7 +75,7 @@ func TestGetCustomerDepositByAccountNumber(t *testing.T) {
 // Test get total balance of customer by account number
 func TestGetTotalBalanceByAccountNumber(t *testing.T) {
 	c.DbConfig()
-	request, _ := http.NewRequest("GET", "/cash_deposit/balance/124", nil)
+	request, _ := http.NewRequest("GET", "/cash_deposit/balance/1234", nil)
 	response := httptest.NewRecorder()
 	Router().ServeHTTP(response, request)
 	assert.Equal(t, http.StatusOK, response.Code, "OK response is expected")

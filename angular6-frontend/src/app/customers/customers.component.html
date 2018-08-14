@@ -1,12 +1,26 @@
+
 <div *ngIf="customers">
-<h4>Customer Transactions List</h4>  
-<ul *ngFor="let customer of customers">
-  <li>{{customer.account_number}}</li>
-  <li>{{customer.customer_name}}</li>
-  <li>{{customer.user_acc}}</li>
-  <ul *ngFor="let deposit_account of customer.deposit_accounts">
-    <li>{{deposit_account.trx_number}}</li>
-    <li>{{deposit_account.amount}}</li>
-  </ul>
+<mat-card class="mat-elevation-z8">
+<mat-card-header>
+  <h4>Transaction History of Customers</h4>
+
+
+</mat-card-header>
+<mat-card-content>
+    <h5>Click on the related customer to view the total balance</h5>
+  <ul class="example-container" *ngFor="let customer of customers" routerLink="/cash_deposit/detail/{{customer.account_number}}">
+      <li><strong>Account Number: </strong>{{customer.account_number}}</li>
+<li><strong>Name: </strong>{{customer.customer_name}}</li>
+<li><strong>Bank Officer (User) Account: </strong> {{customer.user_acc}}</li>
+<ul *ngFor="let deposit_account of customer.deposit_accounts">
+  <li><strong>Trx Number:</strong> {{deposit_account.trx_number}}</li>
+  <li><strong>Amount:</strong> {{deposit_account.amount}}</li>
+  <br/>
+  <hr/>
 </ul>
+
+</ul>
+</mat-card-content>
+</mat-card>
 </div>
+<router-outlet></router-outlet>

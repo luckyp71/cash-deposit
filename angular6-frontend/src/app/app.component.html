@@ -8,28 +8,21 @@
 
 </mat-toolbar>
 
-<mat-drawer-container #sidenav class="container">
+<mat-drawer-container #sidenav class="example-container">
 
   <mat-drawer mode="side" #sidenav class="side-color mat-elevation-z8">
-    <button mat-raised-button color="warn" class="side-button" routerLink="/cash_deposit">
-      <mat-icon color="primary">view_module</mat-icon>
-        Transaction History</button>
+    <button mat-raised-button color="warn" class="side-button" routerLink="/cash_deposit/registration">
+      <mat-icon color="primary">home</mat-icon>
+        User Registration</button>
     <br/>
     <button mat-raised-button color="warn" class="side-button" routerLink="/cash_deposit/deposit">
       <mat-icon color="primary">view_list</mat-icon>
       Deposit</button>
     <br/>
-    <button mat-raised-button color="warn" class="side-button" routerLink="/cash_deposit/search">
-      <mat-icon color="primary">search</mat-icon>
-       Search Transaction</button>
-
-    <!-- <mat-menu #opinionCategories="matMenu">
-      <button  mat-menu-item *ngFor="let c of categories" [routerLink]="['/opinion/categories', c.category]">
-        {{c.category}}
-      </button>
-    </mat-menu> -->
-
-
+    <button mat-raised-button color="warn" class="side-button" routerLink="/cash_deposit">
+      <mat-icon color="primary">view_module</mat-icon>
+        Transaction History</button>
+    
   </mat-drawer>
   <mat-drawer-content>
 

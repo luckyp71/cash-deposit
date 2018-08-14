@@ -1,4 +1,17 @@
 <div *ngIf="messageService.messages.length">
-  <button (click)="messageService.clear()">Clear</button>
-  <div *ngFor="let message of messageService.messages">{{message}}</div>
+  <mat-card class="mat-elevation-z8">
+    <mat-card-content>
+  <div class="example-container">
+  <button mat-raised-button (click)="messageService.clear()">Clear</button>
+
+<!-- <mat-form-field> -->
+
+  <ul *ngFor="let message of messageService.messages">
+    <li>{{message}}</li>
+  </ul>
+
+<!-- </mat-form-field> -->
+</div>
+</mat-card-content>
+</mat-card>
 </div>

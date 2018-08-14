@@ -8,11 +8,11 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { DepositComponent } from './deposit/deposit.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SearchTransactionComponent } from './search-transaction/search-transaction.component';
 import { MaterialModule } from './material/material.module';
 import { DepositService } from './deposit.service';
 import { MessageService } from './message.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CustomerDetailComponent,
     DepositComponent,
     MessagesComponent,
-    SearchTransactionComponent
+    UserRegistrationComponent
   ],
   imports: [
     BrowserModule,

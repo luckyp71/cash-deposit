@@ -1,42 +1,29 @@
-<form>
-<div>
-  <mat-form-field class="deposit">
-    <input matInput #accountNumber placeholder="Account Number"/>
-  </mat-form-field>
-</div>
-
-<div>
-  <mat-form-field class="deposit">
-    <input matInput #customerName placeholder="Customer Name"/>
-  </mat-form-field>
-</div>
-
-<div>
-<mat-form-field class="deposit">
-  <input matInput #userAcc placeholder="User Account"/>
-</mat-form-field>
-</div>
-
-<div>
-  <mat-form-field class="deposit">
-    <input matInput #trxNumber placeholder="Transaction Number"/>
-  </mat-form-field>
-</div>
-
-<div>
-  <mat-form-field class="deposit">
-    <input matInput #amount placeholder="Amount"/>
-  </mat-form-field>
-</div>
-
-    <!-- <button mat-icon-button  (click)="getOpinionsByKeyword(keyword.value)"> -->
-    <!-- <button mat-raised-button> -->
-  <!-- <mat-icon color="primary" class="btn-search">search</mat-icon> -->
-      <!-- </button> -->
-
-      <button mat-raised-button  (click)="getOpinionsByKeyword(keyword.value)">
-      <!-- <button mat-raised-button> -->
-    <!-- <mat-icon color="primary" class="btn-search">search</mat-icon> -->
-        Deposit
-        </button>
-</form>
+<mat-card class="mat-elevation-z8">
+<mat-card-header>
+  <h4>Deposit</h4>
+</mat-card-header>
+<mat-card-content>
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput #accountNumber placeholder="Account Number"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput #customerName  placeholder="Customer Name"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput #userAcc placeholder="Bank Officer (User) Account"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput #trxNumber placeholder="Trx Number"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput #amount placeholder="Amount"/>
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="btn-insert"
+    (click)="postDeposit(accountNumber.value, customerName.value, userAcc.value,
+              trxNumber.value, amount.value)">
+      Deposit
+      </button>
+  </div>
+</mat-card-content>
+</mat-card>
