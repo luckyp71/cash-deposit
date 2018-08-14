@@ -2,7 +2,7 @@
 <h1> Cash Deposit App with Go,  Angular 6, and PostgreSQL </h1>
 
 <div>
-<img src="./assets/Cash_Deposit.png" height="500pt" width="500pt"/>
+<img src="./assets/Cash_Deposit.png" height="500pt" width="900pt"/>
 </div>
 
 
