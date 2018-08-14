@@ -17,7 +17,7 @@
 <p>7.  Web service receive response data from DB and pass data to the frontend.</p>
 
 <h4>Bank Officer:</h4>
-<p>1. Bank officer accesses website via browser to get the transaction history of the related customer</p>
+<p>1. Bank officer accesses website via browser to get the transaction history of all customers or the related customer only</p>
 <p>2. Web browser makes request to the frontend app (Angular 6)</p>
 <p>3. Frontend app makes request to the backend (Golang) by invoking the backend's RESTful web service</p>
 <p>4. Web service send request to DB</p>
