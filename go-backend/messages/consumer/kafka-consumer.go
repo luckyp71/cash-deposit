@@ -21,26 +21,19 @@ const (
 )
 
 var db *gorm.DB
+
 var e error
-var deposit models.DepositAccount
-var bankUser models.BankUser
-var customer models.Customer
 
 var wg sync.WaitGroup
 
 func Consumer() {
-	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=postgres sslmode=disable")
 	if e != nil {
 		log.Fatal(e)
 	}
 	defer db.Close()
-	db.SingularTable(true)
-	db.AutoMigrate(&models.BankUser{}, &models.Customer{}, &models.DepositAccount{})
-	db.Model(&models.Customer{}).AddForeignKey("user_acc", "bank_user(user_account)", "CASCADE", "CASCADE")
-	db.Model(&models.DepositAccount{}).AddForeignKey("acc_number", "customer(account_number)", "CASCADE", "CASCADE")
 
 	ConsumeMessage()
-
 	wg.Done()
 }
 
@@ -63,6 +56,9 @@ func ConsumeMessage() {
 	log.Print("Connected to kafka broker")
 	for m := range partitionConsumer.Messages() {
 
+		var bankUser = models.BankUser{}
+		var customer models.Customer
+
 		log.Println(m.Offset)
 
 		text := string(m.Value)
@@ -75,9 +71,7 @@ func ConsumeMessage() {
 		userAcc := customer.UserAcc
 		log.Println(userAcc)
 
-		var userBank = models.BankUser{}
-
-		if e := db.Debug().Raw("SELECT * FROM bank_user WHERE bank_user.user_account = '" + userAcc + "'").First(&userBank).Error; e != nil {
+		if e := db.Debug().Raw("SELECT * FROM bank_user WHERE bank_user.user_account = '" + userAcc + "'").First(&bankUser).Error; e != nil {
 			log.Fatal(e)
 		} else {
 			if e := db.Debug().Where("account_number = ?", customer.AccountNumber).First(&customer).Error; e != nil {

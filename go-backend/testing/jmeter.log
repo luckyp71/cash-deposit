@@ -1,0 +1,898 @@
+2018-08-18 21:43:04,300 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2018-08-18 21:43:04,329 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/4.0/libexec/bin/user.properties
+2018-08-18 21:43:04,330 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/4.0/libexec/bin/system.properties
+2018-08-18 21:43:04,338 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2018-08-18 21:43:04,338 INFO o.a.j.JMeter: Version 4.0 r1823414
+2018-08-18 21:43:04,338 INFO o.a.j.JMeter: java.version=1.8.0_172
+2018-08-18 21:43:04,338 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2018-08-18 21:43:04,339 INFO o.a.j.JMeter: os.name=Mac OS X
+2018-08-18 21:43:04,339 INFO o.a.j.JMeter: os.arch=x86_64
+2018-08-18 21:43:04,339 INFO o.a.j.JMeter: os.version=10.13.5
+2018-08-18 21:43:04,339 INFO o.a.j.JMeter: file.encoding=UTF-8
+2018-08-18 21:43:04,339 INFO o.a.j.JMeter: Max memory     =1073741824
+2018-08-18 21:43:04,339 INFO o.a.j.JMeter: Available Processors =4
+2018-08-18 21:43:04,345 INFO o.a.j.JMeter: Default Locale=English (EN)
+2018-08-18 21:43:04,345 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2018-08-18 21:43:04,345 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/4.0/libexec
+2018-08-18 21:43:04,345 INFO o.a.j.JMeter: user.dir  =/Users/luckypratama/Go-Projects/src/cash-deposit/go-backend/testing
+2018-08-18 21:43:04,345 INFO o.a.j.JMeter: PWD       =/Users/luckypratama/Go-Projects/src/cash-deposit/go-backend/testing
+2018-08-18 21:43:04,352 INFO o.a.j.JMeter: IP: 192.168.43.237 Name: Lucky FullName: lucky
+2018-08-18 21:43:08,127 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2018-08-18 21:43:08,150 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2018-08-18 21:43:08,150 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2018-08-18 21:43:08,280 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2018-08-18 21:43:09,336 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-08-18 21:43:09,336 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-08-18 21:43:11,302 INFO k.a.j.JMeterPluginsUtils: JMeter-Plugins.org v.1.4.0
+2018-08-18 21:43:12,402 WARN o.a.j.g.u.MenuFactory: Configuration error, probably corrupt or missing third party library(jar)? Could not create class: kg.apc.jmeter.reporters.LoadosophiaUploaderGui.
+java.lang.NoClassDefFoundError: org/apache/commons/httpclient/methods/multipart/PartSource
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.init(LoadosophiaUploaderGui.java:114) ~[JMeterPlugins-Standard.jar:?]
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.<init>(LoadosophiaUploaderGui.java:28) ~[JMeterPlugins-Standard.jar:?]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_172]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_172]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_172]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_172]
+	at java.lang.Class.newInstance(Class.java:442) ~[?:1.8.0_172]
+	at org.apache.jmeter.gui.util.MenuFactory.getGUIComponent(MenuFactory.java:174) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.util.MenuFactory.initializeMenus(MenuFactory.java:141) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.util.MenuFactory.<clinit>(MenuFactory.java:106) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.control.gui.TestPlanGui.createPopupMenu(TestPlanGui.java:92) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.tree.JMeterTreeNode.createPopupMenu(JMeterTreeNode.java:155) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.EditCommand.doAction(EditCommand.java:46) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:88) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:70) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311) [?:1.8.0_172]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758) [?:1.8.0_172]
+	at java.awt.EventQueue.access$500(EventQueue.java:97) [?:1.8.0_172]
+	at java.awt.EventQueue$3.run(EventQueue.java:709) [?:1.8.0_172]
+	at java.awt.EventQueue$3.run(EventQueue.java:703) [?:1.8.0_172]
+	at java.security.AccessController.doPrivileged(Native Method) [?:1.8.0_172]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74) [?:1.8.0_172]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728) [?:1.8.0_172]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205) [?:1.8.0_172]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116) [?:1.8.0_172]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105) [?:1.8.0_172]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:1.8.0_172]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93) [?:1.8.0_172]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82) [?:1.8.0_172]
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.httpclient.methods.multipart.PartSource
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[?:1.8.0_172]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_172]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_172]
+	... 29 more
+2018-08-18 21:43:13,460 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-08-18 21:43:13,460 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-08-18 21:43:13,460 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-08-18 21:43:13,461 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-08-18 21:43:13,461 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-08-18 21:43:13,461 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-08-18 21:43:13,941 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2018-08-18 21:43:13,942 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /usr/local/Cellar/jmeter/4.0/libexec/bin/proxyserver.jks
+2018-08-18 21:43:14,116 INFO o.a.j.s.FileServer: Default base='/Users/luckypratama/Go-Projects/src/cash-deposit/go-backend/testing'
+2018-08-18 21:43:14,598 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-08-18 21:43:14,599 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2018-08-18 21:43:14,599 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-08-18 21:43:14,601 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-08-18 21:46:29,589 INFO o.a.j.s.FileServer: Set new base='/Users/luckypratama/Desktop'
+2018-08-18 21:46:29,747 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-08-18 21:46:29,766 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-08-18 21:46:29,770 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
+2018-08-18 21:46:29,812 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-08-18 21:46:29,814 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-08-18 21:46:29,814 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-08-18 21:46:29,820 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-08-18 21:46:30,054 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : bzm - Concurrency Thread Group
+2018-08-18 21:46:30,054 INFO o.a.j.e.StandardJMeterEngine: Starting 100 threads for group bzm - Concurrency Thread Group.
+2018-08-18 21:46:30,054 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-08-18 21:46:30,055 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-08-18 21:46:30,056 INFO c.b.j.t.c.ConcurrencyThreadStarter: Start supplying threads
+2018-08-18 21:46:30,064 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-1
+2018-08-18 21:46:30,064 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-4
+2018-08-18 21:46:30,064 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-5
+2018-08-18 21:46:30,064 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-3
+2018-08-18 21:46:30,064 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-2
+2018-08-18 21:46:30,064 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-6
+2018-08-18 21:46:30,066 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-7
+2018-08-18 21:46:30,069 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-8
+2018-08-18 21:46:30,069 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-9
+2018-08-18 21:46:30,078 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-17
+2018-08-18 21:46:30,078 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-18
+2018-08-18 21:46:30,079 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-19
+2018-08-18 21:46:30,079 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-20
+2018-08-18 21:46:30,080 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-21
+2018-08-18 21:46:30,080 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-16
+2018-08-18 21:46:30,081 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-22
+2018-08-18 21:46:30,081 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-23
+2018-08-18 21:46:30,082 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-24
+2018-08-18 21:46:30,082 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-25
+2018-08-18 21:46:30,083 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-26
+2018-08-18 21:46:30,085 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-27
+2018-08-18 21:46:30,086 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-28
+2018-08-18 21:46:30,087 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-29
+2018-08-18 21:46:30,087 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-30
+2018-08-18 21:46:30,088 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-31
+2018-08-18 21:46:30,090 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-32
+2018-08-18 21:46:30,090 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-33
+2018-08-18 21:46:30,091 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-34
+2018-08-18 21:46:30,091 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-35
+2018-08-18 21:46:30,093 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Lucky
+2018-08-18 21:46:30,093 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-36
+2018-08-18 21:46:30,093 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-37
+2018-08-18 21:46:30,094 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-38
+2018-08-18 21:46:30,094 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-39
+2018-08-18 21:46:30,095 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-40
+2018-08-18 21:46:30,095 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-41
+2018-08-18 21:46:30,096 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-42
+2018-08-18 21:46:30,096 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-43
+2018-08-18 21:46:30,097 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-44
+2018-08-18 21:46:30,097 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-45
+2018-08-18 21:46:30,098 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-46
+2018-08-18 21:46:30,099 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-47
+2018-08-18 21:46:30,099 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-48
+2018-08-18 21:46:30,101 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-49
+2018-08-18 21:46:30,101 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-50
+2018-08-18 21:46:30,102 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-52
+2018-08-18 21:46:30,102 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2018-08-18 21:46:30,102 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-51
+2018-08-18 21:46:30,103 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-53
+2018-08-18 21:46:30,104 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-54
+2018-08-18 21:46:30,105 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-56
+2018-08-18 21:46:30,105 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-55
+2018-08-18 21:46:30,106 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-58
+2018-08-18 21:46:30,106 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-57
+2018-08-18 21:46:30,107 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-59
+2018-08-18 21:46:30,107 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-60
+2018-08-18 21:46:30,108 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-61
+2018-08-18 21:46:30,109 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-63
+2018-08-18 21:46:30,108 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-62
+2018-08-18 21:46:30,109 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-64
+2018-08-18 21:46:30,110 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-65
+2018-08-18 21:46:30,111 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-67
+2018-08-18 21:46:30,111 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-66
+2018-08-18 21:46:30,112 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-68
+2018-08-18 21:46:30,114 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-69
+2018-08-18 21:46:30,114 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-70
+2018-08-18 21:46:30,115 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-71
+2018-08-18 21:46:30,116 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-72
+2018-08-18 21:46:30,117 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-73
+2018-08-18 21:46:30,118 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-74
+2018-08-18 21:46:30,119 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-75
+2018-08-18 21:46:30,120 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-76
+2018-08-18 21:46:30,122 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-77
+2018-08-18 21:46:30,123 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-78
+2018-08-18 21:46:30,124 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-79
+2018-08-18 21:46:30,126 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-80
+2018-08-18 21:46:30,126 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-81
+2018-08-18 21:46:30,127 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-82
+2018-08-18 21:46:30,129 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-83
+2018-08-18 21:46:30,129 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-84
+2018-08-18 21:46:30,130 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-85
+2018-08-18 21:46:30,131 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-86
+2018-08-18 21:46:30,132 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-87
+2018-08-18 21:46:30,133 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-88
+2018-08-18 21:46:30,134 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-89
+2018-08-18 21:46:30,135 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-90
+2018-08-18 21:46:30,136 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-91
+2018-08-18 21:46:30,138 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-92
+2018-08-18 21:46:30,139 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-93
+2018-08-18 21:46:30,141 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-94
+2018-08-18 21:46:30,144 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-95
+2018-08-18 21:46:30,145 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-96
+2018-08-18 21:46:30,147 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-97
+2018-08-18 21:46:30,148 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-98
+2018-08-18 21:46:30,151 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-99
+2018-08-18 21:46:30,152 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-100
+2018-08-18 21:46:30,172 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-11
+2018-08-18 21:46:30,172 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-10
+2018-08-18 21:46:30,172 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-12
+2018-08-18 21:46:30,173 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-14
+2018-08-18 21:46:30,172 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-13
+2018-08-18 21:46:30,173 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-15
+2018-08-18 21:47:14,782 INFO o.a.j.g.a.Start: Shutting test down
+2018-08-18 21:47:14,809 INFO c.b.j.t.c.ConcurrencyThreadStarter: Done supplying threads
+2018-08-18 21:47:14,809 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-13 sampler: HTTP Request
+2018-08-18 21:47:14,813 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-11 sampler: HTTP Request
+2018-08-18 21:47:14,816 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-32 sampler: HTTP Request
+2018-08-18 21:47:14,817 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-13
+2018-08-18 21:47:14,817 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-13
+2018-08-18 21:47:14,819 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-88
+2018-08-18 21:47:14,819 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-66 sampler: HTTP Request
+2018-08-18 21:47:14,818 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-12
+2018-08-18 21:47:14,820 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-88
+2018-08-18 21:47:14,821 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-69
+2018-08-18 21:47:14,822 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-15 sampler: HTTP Request
+2018-08-18 21:47:14,822 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-69
+2018-08-18 21:47:14,822 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-08-18 21:47:14,822 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-08-18 21:47:14,824 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-48 sampler: HTTP Request
+2018-08-18 21:47:14,824 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-8
+2018-08-18 21:47:14,824 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-8
+2018-08-18 21:47:14,824 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-12
+2018-08-18 21:47:14,827 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-81
+2018-08-18 21:47:14,827 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-81
+2018-08-18 21:47:14,826 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-75 sampler: HTTP Request
+2018-08-18 21:47:14,829 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-84
+2018-08-18 21:47:14,829 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-15
+2018-08-18 21:47:14,831 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-84
+2018-08-18 21:47:14,828 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-66
+2018-08-18 21:47:14,828 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-32
+2018-08-18 21:47:14,831 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-66
+2018-08-18 21:47:14,831 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-32
+2018-08-18 21:47:14,831 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-15
+2018-08-18 21:47:14,830 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-11
+2018-08-18 21:47:14,830 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-48
+2018-08-18 21:47:14,832 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-11
+2018-08-18 21:47:14,832 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-48
+2018-08-18 21:47:14,833 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-31 sampler: HTTP Request
+2018-08-18 21:47:14,834 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-75
+2018-08-18 21:47:14,834 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-75
+2018-08-18 21:47:14,836 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-25 sampler: HTTP Request
+2018-08-18 21:47:14,837 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-31
+2018-08-18 21:47:14,837 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-31
+2018-08-18 21:47:14,843 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-37
+2018-08-18 21:47:14,843 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-37
+2018-08-18 21:47:14,843 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-49
+2018-08-18 21:47:14,843 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-26 sampler: HTTP Request
+2018-08-18 21:47:14,843 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-49
+2018-08-18 21:47:14,844 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-25
+2018-08-18 21:47:14,844 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-25
+2018-08-18 21:47:14,848 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-60 sampler: HTTP Request
+2018-08-18 21:47:14,849 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-51 sampler: HTTP Request
+2018-08-18 21:47:14,849 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-26
+2018-08-18 21:47:14,849 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-26
+2018-08-18 21:47:14,855 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-56 sampler: HTTP Request
+2018-08-18 21:47:14,856 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-60
+2018-08-18 21:47:14,856 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-60
+2018-08-18 21:47:14,858 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-61 sampler: HTTP Request
+2018-08-18 21:47:14,858 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-51
+2018-08-18 21:47:14,858 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-51
+2018-08-18 21:47:14,867 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-35 sampler: HTTP Request
+2018-08-18 21:47:14,868 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-86 sampler: HTTP Request
+2018-08-18 21:47:14,868 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-61
+2018-08-18 21:47:14,868 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-61
+2018-08-18 21:47:14,869 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-56
+2018-08-18 21:47:14,869 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-56
+2018-08-18 21:47:14,871 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-19 sampler: HTTP Request
+2018-08-18 21:47:14,871 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-35
+2018-08-18 21:47:14,871 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-35
+2018-08-18 21:47:14,874 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-38 sampler: HTTP Request
+2018-08-18 21:47:14,874 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-99 sampler: HTTP Request
+2018-08-18 21:47:14,875 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-86
+2018-08-18 21:47:14,875 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-86
+2018-08-18 21:47:14,875 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-19
+2018-08-18 21:47:14,876 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-72 sampler: HTTP Request
+2018-08-18 21:47:14,877 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-19
+2018-08-18 21:47:14,877 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-24 sampler: HTTP Request
+2018-08-18 21:47:14,878 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-38
+2018-08-18 21:47:14,878 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-28 sampler: HTTP Request
+2018-08-18 21:47:14,878 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-99
+2018-08-18 21:47:14,878 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-38
+2018-08-18 21:47:14,878 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-99
+2018-08-18 21:47:14,878 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-40 sampler: HTTP Request
+2018-08-18 21:47:14,878 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-96 sampler: HTTP Request
+2018-08-18 21:47:14,880 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-55 sampler: HTTP Request
+2018-08-18 21:47:14,880 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-72
+2018-08-18 21:47:14,880 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-72
+2018-08-18 21:47:14,880 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-28
+2018-08-18 21:47:14,880 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-79 sampler: HTTP Request
+2018-08-18 21:47:14,880 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-40
+2018-08-18 21:47:14,881 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-40
+2018-08-18 21:47:14,881 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-89 sampler: HTTP Request
+2018-08-18 21:47:14,881 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-28
+2018-08-18 21:47:14,881 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-2 sampler: HTTP Request
+2018-08-18 21:47:14,882 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-27 sampler: HTTP Request
+2018-08-18 21:47:14,882 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-34 sampler: HTTP Request
+2018-08-18 21:47:14,886 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-96
+2018-08-18 21:47:14,886 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-96
+2018-08-18 21:47:14,887 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-24
+2018-08-18 21:47:14,887 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-24
+2018-08-18 21:47:14,887 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-55
+2018-08-18 21:47:14,887 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-55
+2018-08-18 21:47:14,888 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-4 sampler: HTTP Request
+2018-08-18 21:47:14,888 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-79
+2018-08-18 21:47:14,888 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-79
+2018-08-18 21:47:14,888 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-89
+2018-08-18 21:47:14,888 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-47 sampler: HTTP Request
+2018-08-18 21:47:14,888 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-89
+2018-08-18 21:47:14,889 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-27
+2018-08-18 21:47:14,889 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-27
+2018-08-18 21:47:14,890 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-29 sampler: HTTP Request
+2018-08-18 21:47:14,890 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-2
+2018-08-18 21:47:14,890 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-78 sampler: HTTP Request
+2018-08-18 21:47:14,890 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-2
+2018-08-18 21:47:14,890 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-33 sampler: HTTP Request
+2018-08-18 21:47:14,890 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-44 sampler: HTTP Request
+2018-08-18 21:47:14,891 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-70 sampler: HTTP Request
+2018-08-18 21:47:14,891 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-23 sampler: HTTP Request
+2018-08-18 21:47:14,893 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-44
+2018-08-18 21:47:14,893 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-33
+2018-08-18 21:47:14,893 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-78
+2018-08-18 21:47:14,893 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-44
+2018-08-18 21:47:14,893 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-33
+2018-08-18 21:47:14,893 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-78
+2018-08-18 21:47:14,893 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-45 sampler: HTTP Request
+2018-08-18 21:47:14,894 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-29
+2018-08-18 21:47:14,894 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-47
+2018-08-18 21:47:14,894 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-29
+2018-08-18 21:47:14,894 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-47
+2018-08-18 21:47:14,894 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-10 sampler: HTTP Request
+2018-08-18 21:47:14,894 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-4
+2018-08-18 21:47:14,895 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-4
+2018-08-18 21:47:14,895 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-34
+2018-08-18 21:47:14,895 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-34
+2018-08-18 21:47:14,895 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-90 sampler: HTTP Request
+2018-08-18 21:47:14,896 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-53 sampler: HTTP Request
+2018-08-18 21:47:14,896 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-83 sampler: HTTP Request
+2018-08-18 21:47:14,896 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-70
+2018-08-18 21:47:14,898 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-53
+2018-08-18 21:47:14,898 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-90
+2018-08-18 21:47:14,899 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-87 sampler: HTTP Request
+2018-08-18 21:47:14,899 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-53
+2018-08-18 21:47:14,898 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-10
+2018-08-18 21:47:14,899 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-10
+2018-08-18 21:47:14,898 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-23
+2018-08-18 21:47:14,899 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-23
+2018-08-18 21:47:14,899 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-95 sampler: HTTP Request
+2018-08-18 21:47:14,898 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-45
+2018-08-18 21:47:14,899 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-82 sampler: HTTP Request
+2018-08-18 21:47:14,899 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-83
+2018-08-18 21:47:14,899 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-45
+2018-08-18 21:47:14,899 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-93 sampler: HTTP Request
+2018-08-18 21:47:14,899 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-90
+2018-08-18 21:47:14,900 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-95
+2018-08-18 21:47:14,900 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-87
+2018-08-18 21:47:14,900 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-95
+2018-08-18 21:47:14,900 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-70
+2018-08-18 21:47:14,900 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-65 sampler: HTTP Request
+2018-08-18 21:47:14,899 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-83
+2018-08-18 21:47:14,901 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-20 sampler: HTTP Request
+2018-08-18 21:47:14,901 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-93
+2018-08-18 21:47:14,901 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-93
+2018-08-18 21:47:14,900 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-87
+2018-08-18 21:47:14,902 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-67 sampler: HTTP Request
+2018-08-18 21:47:14,901 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-65
+2018-08-18 21:47:14,902 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-65
+2018-08-18 21:47:14,902 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-74 sampler: HTTP Request
+2018-08-18 21:47:14,902 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-20
+2018-08-18 21:47:14,902 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-20
+2018-08-18 21:47:14,903 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-91 sampler: HTTP Request
+2018-08-18 21:47:14,903 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-67
+2018-08-18 21:47:14,903 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-67
+2018-08-18 21:47:14,903 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-5 sampler: HTTP Request
+2018-08-18 21:47:14,904 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-58 sampler: HTTP Request
+2018-08-18 21:47:14,904 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-74
+2018-08-18 21:47:14,904 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-74
+2018-08-18 21:47:14,904 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-91
+2018-08-18 21:47:14,904 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-30 sampler: HTTP Request
+2018-08-18 21:47:14,904 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-91
+2018-08-18 21:47:14,904 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-5
+2018-08-18 21:47:14,904 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-5
+2018-08-18 21:47:14,904 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-46 sampler: HTTP Request
+2018-08-18 21:47:14,905 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-39 sampler: HTTP Request
+2018-08-18 21:47:14,905 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-58
+2018-08-18 21:47:14,905 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-58
+2018-08-18 21:47:14,905 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-30
+2018-08-18 21:47:14,905 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-30
+2018-08-18 21:47:14,905 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-21 sampler: HTTP Request
+2018-08-18 21:47:14,905 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-98 sampler: HTTP Request
+2018-08-18 21:47:14,906 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-46
+2018-08-18 21:47:14,906 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-46
+2018-08-18 21:47:14,906 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-59 sampler: HTTP Request
+2018-08-18 21:47:14,906 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-39
+2018-08-18 21:47:14,906 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-39
+2018-08-18 21:47:14,906 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-98
+2018-08-18 21:47:14,906 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-98
+2018-08-18 21:47:14,907 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-85 sampler: HTTP Request
+2018-08-18 21:47:14,906 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-21
+2018-08-18 21:47:14,907 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-21
+2018-08-18 21:47:14,907 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-94 sampler: HTTP Request
+2018-08-18 21:47:14,908 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-59
+2018-08-18 21:47:14,908 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-59
+2018-08-18 21:47:14,908 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-85
+2018-08-18 21:47:14,908 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-85
+2018-08-18 21:47:14,908 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-7 sampler: HTTP Request
+2018-08-18 21:47:14,908 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-22 sampler: HTTP Request
+2018-08-18 21:47:14,909 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-18 sampler: HTTP Request
+2018-08-18 21:47:14,909 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-94
+2018-08-18 21:47:14,909 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-94
+2018-08-18 21:47:14,909 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-7
+2018-08-18 21:47:14,909 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-7
+2018-08-18 21:47:14,910 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-9 sampler: HTTP Request
+2018-08-18 21:47:14,910 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-22
+2018-08-18 21:47:14,910 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-22
+2018-08-18 21:47:14,910 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-18
+2018-08-18 21:47:14,910 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-18
+2018-08-18 21:47:14,910 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-57 sampler: HTTP Request
+2018-08-18 21:47:14,911 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-17 sampler: HTTP Request
+2018-08-18 21:47:14,911 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-63 sampler: HTTP Request
+2018-08-18 21:47:14,912 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-9
+2018-08-18 21:47:14,912 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-9
+2018-08-18 21:47:14,912 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-6 sampler: HTTP Request
+2018-08-18 21:47:14,912 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-62 sampler: HTTP Request
+2018-08-18 21:47:14,912 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-80 sampler: HTTP Request
+2018-08-18 21:47:14,912 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-77 sampler: HTTP Request
+2018-08-18 21:47:14,912 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-16 sampler: HTTP Request
+2018-08-18 21:47:14,913 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-92 sampler: HTTP Request
+2018-08-18 21:47:14,913 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-73 sampler: HTTP Request
+2018-08-18 21:47:14,913 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-68 sampler: HTTP Request
+2018-08-18 21:47:14,913 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-41 sampler: HTTP Request
+2018-08-18 21:47:14,914 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-57
+2018-08-18 21:47:14,914 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-100 sampler: HTTP Request
+2018-08-18 21:47:14,914 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-57
+2018-08-18 21:47:14,914 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-54 sampler: HTTP Request
+2018-08-18 21:47:14,914 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-50 sampler: HTTP Request
+2018-08-18 21:47:14,914 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-14 sampler: HTTP Request
+2018-08-18 21:47:14,915 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-71 sampler: HTTP Request
+2018-08-18 21:47:14,915 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-43 sampler: HTTP Request
+2018-08-18 21:47:14,915 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-63
+2018-08-18 21:47:14,915 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-63
+2018-08-18 21:47:14,916 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-1 sampler: HTTP Request
+2018-08-18 21:47:14,916 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-97 sampler: HTTP Request
+2018-08-18 21:47:14,916 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-17
+2018-08-18 21:47:14,916 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-17
+2018-08-18 21:47:14,916 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-3 sampler: HTTP Request
+2018-08-18 21:47:14,917 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-36 sampler: HTTP Request
+2018-08-18 21:47:14,917 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-64 sampler: HTTP Request
+2018-08-18 21:47:14,917 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-52 sampler: HTTP Request
+2018-08-18 21:47:14,918 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-42 sampler: HTTP Request
+2018-08-18 21:47:14,918 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-76 sampler: HTTP Request
+2018-08-18 21:47:14,918 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-6
+2018-08-18 21:47:14,918 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-6
+2018-08-18 21:47:14,919 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-62
+2018-08-18 21:47:14,919 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-80
+2018-08-18 21:47:14,919 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-62
+2018-08-18 21:47:14,919 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-80
+2018-08-18 21:47:14,920 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-77
+2018-08-18 21:47:14,920 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-77
+2018-08-18 21:47:14,921 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-16
+2018-08-18 21:47:14,921 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-16
+2018-08-18 21:47:14,923 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-92
+2018-08-18 21:47:14,923 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-92
+2018-08-18 21:47:14,924 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-73
+2018-08-18 21:47:14,924 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-73
+2018-08-18 21:47:14,924 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-41
+2018-08-18 21:47:14,924 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-68
+2018-08-18 21:47:14,924 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-41
+2018-08-18 21:47:14,924 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-68
+2018-08-18 21:47:14,925 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-100
+2018-08-18 21:47:14,925 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-100
+2018-08-18 21:47:14,925 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-54
+2018-08-18 21:47:14,925 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-54
+2018-08-18 21:47:14,925 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-50
+2018-08-18 21:47:14,925 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-14
+2018-08-18 21:47:14,925 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-50
+2018-08-18 21:47:14,925 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-14
+2018-08-18 21:47:14,926 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-71
+2018-08-18 21:47:14,926 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-1
+2018-08-18 21:47:14,926 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-71
+2018-08-18 21:47:14,926 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-1
+2018-08-18 21:47:14,926 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-43
+2018-08-18 21:47:14,926 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-97
+2018-08-18 21:47:14,926 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-3
+2018-08-18 21:47:14,926 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-43
+2018-08-18 21:47:14,926 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-97
+2018-08-18 21:47:14,927 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-52
+2018-08-18 21:47:14,927 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-42
+2018-08-18 21:47:14,927 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-52
+2018-08-18 21:47:14,927 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-42
+2018-08-18 21:47:14,927 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-76
+2018-08-18 21:47:14,927 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-76
+2018-08-18 21:47:14,928 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-3
+2018-08-18 21:47:14,928 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-64
+2018-08-18 21:47:14,928 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-36
+2018-08-18 21:47:14,928 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-64
+2018-08-18 21:47:14,928 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-36
+2018-08-18 21:47:14,931 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-82
+2018-08-18 21:47:14,931 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-82
+2018-08-18 21:49:26,130 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-08-18 21:49:26,131 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-08-18 21:49:26,139 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2018-08-18 21:49:26,375 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : bzm - Concurrency Thread Group
+2018-08-18 21:49:26,375 INFO o.a.j.e.StandardJMeterEngine: Starting 100 threads for group bzm - Concurrency Thread Group.
+2018-08-18 21:49:26,375 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-08-18 21:49:26,376 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-08-18 21:49:26,376 INFO c.b.j.t.c.ConcurrencyThreadStarter: Start supplying threads
+2018-08-18 21:49:26,378 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-1
+2018-08-18 21:49:26,378 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-2
+2018-08-18 21:49:26,378 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-3
+2018-08-18 21:49:26,379 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-4
+2018-08-18 21:49:26,379 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-5
+2018-08-18 21:49:26,379 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-6
+2018-08-18 21:49:26,380 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-7
+2018-08-18 21:49:26,380 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-8
+2018-08-18 21:49:26,381 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-9
+2018-08-18 21:49:26,381 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-10
+2018-08-18 21:49:26,382 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-11
+2018-08-18 21:49:26,382 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-12
+2018-08-18 21:49:26,382 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-13
+2018-08-18 21:49:26,383 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-14
+2018-08-18 21:49:26,383 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-15
+2018-08-18 21:49:26,383 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-16
+2018-08-18 21:49:26,383 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-17
+2018-08-18 21:49:26,384 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-18
+2018-08-18 21:49:26,385 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-19
+2018-08-18 21:49:26,385 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-20
+2018-08-18 21:49:26,386 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-21
+2018-08-18 21:49:26,387 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-22
+2018-08-18 21:49:26,388 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-23
+2018-08-18 21:49:26,388 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-24
+2018-08-18 21:49:26,389 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-26
+2018-08-18 21:49:26,389 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-25
+2018-08-18 21:49:26,390 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-27
+2018-08-18 21:49:26,390 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-28
+2018-08-18 21:49:26,391 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-29
+2018-08-18 21:49:26,391 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-30
+2018-08-18 21:49:26,392 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-31
+2018-08-18 21:49:26,393 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-32
+2018-08-18 21:49:26,394 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-33
+2018-08-18 21:49:26,395 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-34
+2018-08-18 21:49:26,395 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-35
+2018-08-18 21:49:26,396 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-36
+2018-08-18 21:49:26,397 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-37
+2018-08-18 21:49:26,398 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-38
+2018-08-18 21:49:26,399 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-39
+2018-08-18 21:49:26,399 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-40
+2018-08-18 21:49:26,399 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-41
+2018-08-18 21:49:26,400 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-42
+2018-08-18 21:49:26,400 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-43
+2018-08-18 21:49:26,401 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-45
+2018-08-18 21:49:26,401 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-44
+2018-08-18 21:49:26,402 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-46
+2018-08-18 21:49:26,403 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-47
+2018-08-18 21:49:26,404 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-48
+2018-08-18 21:49:26,404 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-49
+2018-08-18 21:49:26,405 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-50
+2018-08-18 21:49:26,406 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-51
+2018-08-18 21:49:26,406 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-52
+2018-08-18 21:49:26,407 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-53
+2018-08-18 21:49:26,408 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-54
+2018-08-18 21:49:26,408 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-55
+2018-08-18 21:49:26,409 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-56
+2018-08-18 21:49:26,410 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-57
+2018-08-18 21:49:26,410 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-58
+2018-08-18 21:49:26,411 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-59
+2018-08-18 21:49:26,412 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-60
+2018-08-18 21:49:26,412 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-61
+2018-08-18 21:49:26,413 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-62
+2018-08-18 21:49:26,414 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-63
+2018-08-18 21:49:26,414 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-64
+2018-08-18 21:49:26,415 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-65
+2018-08-18 21:49:26,416 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-66
+2018-08-18 21:49:26,417 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-67
+2018-08-18 21:49:26,417 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-68
+2018-08-18 21:49:26,417 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-69
+2018-08-18 21:49:26,418 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-70
+2018-08-18 21:49:26,418 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-71
+2018-08-18 21:49:26,419 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-72
+2018-08-18 21:49:26,419 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-73
+2018-08-18 21:49:26,419 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-74
+2018-08-18 21:49:26,420 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-75
+2018-08-18 21:49:26,420 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-76
+2018-08-18 21:49:26,420 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-77
+2018-08-18 21:49:26,421 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-78
+2018-08-18 21:49:26,421 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-79
+2018-08-18 21:49:26,421 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-80
+2018-08-18 21:49:26,422 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-81
+2018-08-18 21:49:26,423 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-82
+2018-08-18 21:49:26,424 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-83
+2018-08-18 21:49:26,424 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-84
+2018-08-18 21:49:26,425 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-85
+2018-08-18 21:49:26,425 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-86
+2018-08-18 21:49:26,425 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-87
+2018-08-18 21:49:26,426 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-88
+2018-08-18 21:49:26,426 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-89
+2018-08-18 21:49:26,426 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-90
+2018-08-18 21:49:26,427 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-91
+2018-08-18 21:49:26,427 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-92
+2018-08-18 21:49:26,428 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-93
+2018-08-18 21:49:26,428 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-94
+2018-08-18 21:49:26,428 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-95
+2018-08-18 21:49:26,429 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-96
+2018-08-18 21:49:26,429 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-97
+2018-08-18 21:49:26,429 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-98
+2018-08-18 21:49:26,430 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-99
+2018-08-18 21:49:26,430 INFO o.a.j.t.JMeterThread: Thread started: bzm - Concurrency Thread Group 1-100
+2018-08-18 21:49:30,011 INFO o.a.j.r.Summariser: Generate Summary Results +   1086 in 00:00:04 =  280.2/s Avg:   262 Min:     3 Max:  1632 Err:     0 (0.00%) Active: 100 Started: 100 Finished: 0
+2018-08-18 21:49:42,065 INFO o.a.j.g.a.Start: Shutting test down
+2018-08-18 21:49:42,094 INFO c.b.j.t.c.ConcurrencyThreadStarter: Done supplying threads
+2018-08-18 21:49:42,094 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-4 sampler: HTTP Request
+2018-08-18 21:49:42,096 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-1 sampler: HTTP Request
+2018-08-18 21:49:42,096 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-26 sampler: HTTP Request
+2018-08-18 21:49:42,097 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-10 sampler: HTTP Request
+2018-08-18 21:49:42,098 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-46 sampler: HTTP Request
+2018-08-18 21:49:42,097 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-4
+2018-08-18 21:49:42,098 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-1
+2018-08-18 21:49:42,098 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-24 sampler: HTTP Request
+2018-08-18 21:49:42,098 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-26
+2018-08-18 21:49:42,099 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-10
+2018-08-18 21:49:42,099 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-10
+2018-08-18 21:49:42,099 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-46
+2018-08-18 21:49:42,099 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-46
+2018-08-18 21:49:42,099 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-26
+2018-08-18 21:49:42,098 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-1
+2018-08-18 21:49:42,098 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-4
+2018-08-18 21:49:42,100 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-24
+2018-08-18 21:49:42,100 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-8
+2018-08-18 21:49:42,101 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-08-18 21:49:42,100 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-29 sampler: HTTP Request
+2018-08-18 21:49:42,101 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-8
+2018-08-18 21:49:42,102 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-33 sampler: HTTP Request
+2018-08-18 21:49:42,102 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-95
+2018-08-18 21:49:42,102 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-24
+2018-08-18 21:49:42,102 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-95
+2018-08-18 21:49:42,103 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-33
+2018-08-18 21:49:42,103 INFO o.a.j.r.Summariser: Generate Summary Results +   4403 in 00:00:12 =  364.1/s Avg:   275 Min:     3 Max:  1530 Err:     7 (0.16%) Active: 93 Started: 100 Finished: 7
+2018-08-18 21:49:42,104 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-33
+2018-08-18 21:49:42,103 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-54 sampler: HTTP Request
+2018-08-18 21:49:42,102 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-29
+2018-08-18 21:49:42,104 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-29
+2018-08-18 21:49:42,105 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-18 sampler: HTTP Request
+2018-08-18 21:49:42,105 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-50 sampler: HTTP Request
+2018-08-18 21:49:42,106 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-9 sampler: HTTP Request
+2018-08-18 21:49:42,106 INFO o.a.j.r.Summariser: Generate Summary Results =   5490 in 00:00:16 =  343.8/s Avg:   272 Min:     3 Max:  1632 Err:     8 (0.15%)
+2018-08-18 21:49:42,107 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-13 sampler: HTTP Request
+2018-08-18 21:49:42,107 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-54
+2018-08-18 21:49:42,107 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-50
+2018-08-18 21:49:42,107 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-54
+2018-08-18 21:49:42,107 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-50
+2018-08-18 21:49:42,108 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-32 sampler: HTTP Request
+2018-08-18 21:49:42,108 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2018-08-18 21:49:42,108 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-18
+2018-08-18 21:49:42,108 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-18
+2018-08-18 21:49:42,108 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-35 sampler: HTTP Request
+2018-08-18 21:49:42,108 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-85
+2018-08-18 21:49:42,108 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-85
+2018-08-18 21:49:42,109 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-70 sampler: HTTP Request
+2018-08-18 21:49:42,110 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-9
+2018-08-18 21:49:42,110 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-9
+2018-08-18 21:49:42,110 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-35
+2018-08-18 21:49:42,111 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-32
+2018-08-18 21:49:42,111 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-13
+2018-08-18 21:49:42,111 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-32
+2018-08-18 21:49:42,111 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-13
+2018-08-18 21:49:42,111 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-35
+2018-08-18 21:49:42,112 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-73 sampler: HTTP Request
+2018-08-18 21:49:42,113 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-70
+2018-08-18 21:49:42,113 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-70
+2018-08-18 21:49:42,113 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-80 sampler: HTTP Request
+2018-08-18 21:49:42,114 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-73
+2018-08-18 21:49:42,116 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-98 sampler: HTTP Request
+2018-08-18 21:49:42,116 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-73
+2018-08-18 21:49:42,116 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-80
+2018-08-18 21:49:42,116 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-80
+2018-08-18 21:49:42,118 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-86 sampler: HTTP Request
+2018-08-18 21:49:42,118 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-98
+2018-08-18 21:49:42,118 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-98
+2018-08-18 21:49:42,120 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-12 sampler: HTTP Request
+2018-08-18 21:49:42,120 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-86
+2018-08-18 21:49:42,121 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-86
+2018-08-18 21:49:42,121 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-57 sampler: HTTP Request
+2018-08-18 21:49:42,121 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-12
+2018-08-18 21:49:42,121 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-49 sampler: HTTP Request
+2018-08-18 21:49:42,121 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-12
+2018-08-18 21:49:42,122 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-67 sampler: HTTP Request
+2018-08-18 21:49:42,122 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-57
+2018-08-18 21:49:42,122 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-49
+2018-08-18 21:49:42,123 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-49
+2018-08-18 21:49:42,123 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-57
+2018-08-18 21:49:42,123 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-94 sampler: HTTP Request
+2018-08-18 21:49:42,123 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-67
+2018-08-18 21:49:42,123 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-60 sampler: HTTP Request
+2018-08-18 21:49:42,123 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-67
+2018-08-18 21:49:42,124 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-88 sampler: HTTP Request
+2018-08-18 21:49:42,124 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-94
+2018-08-18 21:49:42,125 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-94
+2018-08-18 21:49:42,125 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-60
+2018-08-18 21:49:42,125 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-60
+2018-08-18 21:49:42,125 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-23 sampler: HTTP Request
+2018-08-18 21:49:42,126 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-88
+2018-08-18 21:49:42,126 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-88
+2018-08-18 21:49:42,126 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-82 sampler: HTTP Request
+2018-08-18 21:49:42,126 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-23
+2018-08-18 21:49:42,126 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-23
+2018-08-18 21:49:42,126 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-20 sampler: HTTP Request
+2018-08-18 21:49:42,127 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-82
+2018-08-18 21:49:42,127 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-82
+2018-08-18 21:49:42,127 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-14 sampler: HTTP Request
+2018-08-18 21:49:42,127 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-20
+2018-08-18 21:49:42,127 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-20
+2018-08-18 21:49:42,128 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-45 sampler: HTTP Request
+2018-08-18 21:49:42,128 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-14
+2018-08-18 21:49:42,128 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-14
+2018-08-18 21:49:42,128 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-30 sampler: HTTP Request
+2018-08-18 21:49:42,129 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-45
+2018-08-18 21:49:42,129 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-45
+2018-08-18 21:49:42,129 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-7 sampler: HTTP Request
+2018-08-18 21:49:42,129 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-53 sampler: HTTP Request
+2018-08-18 21:49:42,130 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-7
+2018-08-18 21:49:42,130 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-7
+2018-08-18 21:49:42,130 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-30
+2018-08-18 21:49:42,131 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-30
+2018-08-18 21:49:42,131 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-53
+2018-08-18 21:49:42,130 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-22 sampler: HTTP Request
+2018-08-18 21:49:42,132 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-53
+2018-08-18 21:49:42,134 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-36 sampler: HTTP Request
+2018-08-18 21:49:42,134 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-22
+2018-08-18 21:49:42,134 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-22
+2018-08-18 21:49:42,134 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-56 sampler: HTTP Request
+2018-08-18 21:49:42,135 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-36
+2018-08-18 21:49:42,135 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-36
+2018-08-18 21:49:42,136 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-78 sampler: HTTP Request
+2018-08-18 21:49:42,136 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-81 sampler: HTTP Request
+2018-08-18 21:49:42,136 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-56
+2018-08-18 21:49:42,136 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-56
+2018-08-18 21:49:42,137 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-11 sampler: HTTP Request
+2018-08-18 21:49:42,137 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-78
+2018-08-18 21:49:42,137 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-78
+2018-08-18 21:49:42,137 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-81
+2018-08-18 21:49:42,137 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-6 sampler: HTTP Request
+2018-08-18 21:49:42,137 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-81
+2018-08-18 21:49:42,137 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-91 sampler: HTTP Request
+2018-08-18 21:49:42,137 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-11
+2018-08-18 21:49:42,138 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-11
+2018-08-18 21:49:42,138 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-68 sampler: HTTP Request
+2018-08-18 21:49:42,138 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-6
+2018-08-18 21:49:42,138 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-6
+2018-08-18 21:49:42,138 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-91
+2018-08-18 21:49:42,138 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-34 sampler: HTTP Request
+2018-08-18 21:49:42,138 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-91
+2018-08-18 21:49:42,138 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-68
+2018-08-18 21:49:42,138 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-68
+2018-08-18 21:49:42,139 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-76 sampler: HTTP Request
+2018-08-18 21:49:42,139 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-2 sampler: HTTP Request
+2018-08-18 21:49:42,139 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-34
+2018-08-18 21:49:42,139 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-76
+2018-08-18 21:49:42,139 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-34
+2018-08-18 21:49:42,139 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-76
+2018-08-18 21:49:42,139 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-38 sampler: HTTP Request
+2018-08-18 21:49:42,139 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-44 sampler: HTTP Request
+2018-08-18 21:49:42,140 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-2
+2018-08-18 21:49:42,140 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-2
+2018-08-18 21:49:42,140 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-38
+2018-08-18 21:49:42,140 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-38
+2018-08-18 21:49:42,140 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-39 sampler: HTTP Request
+2018-08-18 21:49:42,140 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-69 sampler: HTTP Request
+2018-08-18 21:49:42,140 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-44
+2018-08-18 21:49:42,140 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-44
+2018-08-18 21:49:42,140 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-39
+2018-08-18 21:49:42,140 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-39
+2018-08-18 21:49:42,140 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-71 sampler: HTTP Request
+2018-08-18 21:49:42,141 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-75 sampler: HTTP Request
+2018-08-18 21:49:42,141 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-69
+2018-08-18 21:49:42,141 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-69
+2018-08-18 21:49:42,141 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-71
+2018-08-18 21:49:42,141 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-71
+2018-08-18 21:49:42,141 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-90 sampler: HTTP Request
+2018-08-18 21:49:42,141 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-96 sampler: HTTP Request
+2018-08-18 21:49:42,141 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-75
+2018-08-18 21:49:42,141 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-75
+2018-08-18 21:49:42,141 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-90
+2018-08-18 21:49:42,142 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-90
+2018-08-18 21:49:42,142 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-28 sampler: HTTP Request
+2018-08-18 21:49:42,142 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-59 sampler: HTTP Request
+2018-08-18 21:49:42,142 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-96
+2018-08-18 21:49:42,142 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-96
+2018-08-18 21:49:42,142 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-28
+2018-08-18 21:49:42,142 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-28
+2018-08-18 21:49:42,142 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-72 sampler: HTTP Request
+2018-08-18 21:49:42,142 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-87 sampler: HTTP Request
+2018-08-18 21:49:42,143 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-59
+2018-08-18 21:49:42,143 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-59
+2018-08-18 21:49:42,143 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-72
+2018-08-18 21:49:42,143 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-72
+2018-08-18 21:49:42,143 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-52 sampler: HTTP Request
+2018-08-18 21:49:42,143 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-74 sampler: HTTP Request
+2018-08-18 21:49:42,143 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-87
+2018-08-18 21:49:42,143 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-87
+2018-08-18 21:49:42,144 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-52
+2018-08-18 21:49:42,144 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-83 sampler: HTTP Request
+2018-08-18 21:49:42,144 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-52
+2018-08-18 21:49:42,144 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-74
+2018-08-18 21:49:42,144 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-27 sampler: HTTP Request
+2018-08-18 21:49:42,144 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-74
+2018-08-18 21:49:42,144 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-83
+2018-08-18 21:49:42,144 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-55 sampler: HTTP Request
+2018-08-18 21:49:42,144 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-83
+2018-08-18 21:49:42,145 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-62 sampler: HTTP Request
+2018-08-18 21:49:42,145 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-27
+2018-08-18 21:49:42,145 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-27
+2018-08-18 21:49:42,145 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-55
+2018-08-18 21:49:42,145 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-25 sampler: HTTP Request
+2018-08-18 21:49:42,145 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-55
+2018-08-18 21:49:42,145 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-79 sampler: HTTP Request
+2018-08-18 21:49:42,145 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-62
+2018-08-18 21:49:42,146 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-62
+2018-08-18 21:49:42,146 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-25
+2018-08-18 21:49:42,146 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-17 sampler: HTTP Request
+2018-08-18 21:49:42,146 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-25
+2018-08-18 21:49:42,146 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-79
+2018-08-18 21:49:42,146 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-79
+2018-08-18 21:49:42,147 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-99 sampler: HTTP Request
+2018-08-18 21:49:42,147 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-58 sampler: HTTP Request
+2018-08-18 21:49:42,147 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-17
+2018-08-18 21:49:42,147 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-17
+2018-08-18 21:49:42,147 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-19 sampler: HTTP Request
+2018-08-18 21:49:42,147 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-99
+2018-08-18 21:49:42,147 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-99
+2018-08-18 21:49:42,148 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-58
+2018-08-18 21:49:42,148 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-58
+2018-08-18 21:49:42,148 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-5 sampler: HTTP Request
+2018-08-18 21:49:42,148 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-37 sampler: HTTP Request
+2018-08-18 21:49:42,148 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-19
+2018-08-18 21:49:42,148 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-19
+2018-08-18 21:49:42,148 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-5
+2018-08-18 21:49:42,148 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-100 sampler: HTTP Request
+2018-08-18 21:49:42,148 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-5
+2018-08-18 21:49:42,149 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-43 sampler: HTTP Request
+2018-08-18 21:49:42,149 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-37
+2018-08-18 21:49:42,149 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-100
+2018-08-18 21:49:42,149 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-37
+2018-08-18 21:49:42,149 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-100
+2018-08-18 21:49:42,149 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-48 sampler: HTTP Request
+2018-08-18 21:49:42,149 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-47 sampler: HTTP Request
+2018-08-18 21:49:42,149 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-43
+2018-08-18 21:49:42,149 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-43
+2018-08-18 21:49:42,150 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-48
+2018-08-18 21:49:42,150 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-92 sampler: HTTP Request
+2018-08-18 21:49:42,150 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-48
+2018-08-18 21:49:42,150 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-3 sampler: HTTP Request
+2018-08-18 21:49:42,150 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-47
+2018-08-18 21:49:42,150 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-47
+2018-08-18 21:49:42,150 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-92
+2018-08-18 21:49:42,150 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-92
+2018-08-18 21:49:42,150 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-65 sampler: HTTP Request
+2018-08-18 21:49:42,151 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-40 sampler: HTTP Request
+2018-08-18 21:49:42,151 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-3
+2018-08-18 21:49:42,151 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-3
+2018-08-18 21:49:42,151 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-65
+2018-08-18 21:49:42,151 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-65
+2018-08-18 21:49:42,151 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-16 sampler: HTTP Request
+2018-08-18 21:49:42,151 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-77 sampler: HTTP Request
+2018-08-18 21:49:42,151 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-40
+2018-08-18 21:49:42,151 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-40
+2018-08-18 21:49:42,151 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-16
+2018-08-18 21:49:42,152 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-89 sampler: HTTP Request
+2018-08-18 21:49:42,152 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-16
+2018-08-18 21:49:42,152 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-77
+2018-08-18 21:49:42,152 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-77
+2018-08-18 21:49:42,152 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-31 sampler: HTTP Request
+2018-08-18 21:49:42,153 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-89
+2018-08-18 21:49:42,153 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-41 sampler: HTTP Request
+2018-08-18 21:49:42,153 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-89
+2018-08-18 21:49:42,153 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-42 sampler: HTTP Request
+2018-08-18 21:49:42,153 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-31
+2018-08-18 21:49:42,153 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-31
+2018-08-18 21:49:42,153 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-93 sampler: HTTP Request
+2018-08-18 21:49:42,153 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-41
+2018-08-18 21:49:42,153 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-41
+2018-08-18 21:49:42,154 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-15 sampler: HTTP Request
+2018-08-18 21:49:42,154 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-42
+2018-08-18 21:49:42,154 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-42
+2018-08-18 21:49:42,154 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-63 sampler: HTTP Request
+2018-08-18 21:49:42,154 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-93
+2018-08-18 21:49:42,154 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-93
+2018-08-18 21:49:42,154 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-66 sampler: HTTP Request
+2018-08-18 21:49:42,154 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-15
+2018-08-18 21:49:42,154 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-15
+2018-08-18 21:49:42,155 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-21 sampler: HTTP Request
+2018-08-18 21:49:42,155 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-63
+2018-08-18 21:49:42,155 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-63
+2018-08-18 21:49:42,155 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-97 sampler: HTTP Request
+2018-08-18 21:49:42,155 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-66
+2018-08-18 21:49:42,155 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-66
+2018-08-18 21:49:42,155 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-64 sampler: HTTP Request
+2018-08-18 21:49:42,155 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-21
+2018-08-18 21:49:42,155 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-21
+2018-08-18 21:49:42,155 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-84 sampler: HTTP Request
+2018-08-18 21:49:42,155 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-97
+2018-08-18 21:49:42,155 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-97
+2018-08-18 21:49:42,156 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-61 sampler: HTTP Request
+2018-08-18 21:49:42,156 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-64
+2018-08-18 21:49:42,156 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-64
+2018-08-18 21:49:42,156 WARN o.a.j.t.JMeterThread: Interrupting: bzm - Concurrency Thread Group 1-51 sampler: HTTP Request
+2018-08-18 21:49:42,156 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-84
+2018-08-18 21:49:42,156 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-84
+2018-08-18 21:49:42,156 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-61
+2018-08-18 21:49:42,156 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-61
+2018-08-18 21:49:42,157 INFO o.a.j.t.JMeterThread: Thread is done: bzm - Concurrency Thread Group 1-51
+2018-08-18 21:49:42,157 INFO o.a.j.t.JMeterThread: Thread finished: bzm - Concurrency Thread Group 1-51

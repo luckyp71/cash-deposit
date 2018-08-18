@@ -20,24 +20,18 @@ import (
 var db *gorm.DB
 var e error
 
-var deposit m.DepositAccount
 var bankUser m.BankUser
 var customer m.Customer
-var result m.Result
+
 var wg sync.WaitGroup
 
 func Router() {
-	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=postgres sslmode=disable")
 	if e != nil {
 		fmt.Println(e)
-	} else {
-		fmt.Println("Connection Established")
 	}
 	defer db.Close()
-	db.SingularTable(true)
-	db.AutoMigrate(&m.BankUser{}, &m.Customer{}, &m.DepositAccount{})
-	db.Model(&m.Customer{}).AddForeignKey("user_acc", "bank_user(user_account)", "CASCADE", "CASCADE")
-	db.Model(&m.DepositAccount{}).AddForeignKey("acc_number", "customer(account_number)", "CASCADE", "CASCADE")
+
 	router := mux.NewRouter()
 	sub := router.PathPrefix("/cash_deposit").Subrouter()
 	sub.HandleFunc("", PostDeposit).Methods("POST")
@@ -54,16 +48,13 @@ func Router() {
 
 // DB Configuration for unit testing
 func DbConfig() {
-	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=postgres sslmode=disable")
 	if e != nil {
 		fmt.Println(e)
 	} else {
 		fmt.Println("Connection Established")
 	}
 	db.SingularTable(true)
-	db.AutoMigrate(&m.BankUser{}, &m.Customer{}, &m.DepositAccount{})
-	db.Model(&m.Customer{}).AddForeignKey("user_acc", "bank_user(user_account)", "CASCADE", "CASCADE")
-	db.Model(&m.DepositAccount{}).AddForeignKey("acc_number", "customer(account_number)", "CASCADE", "CASCADE")
 }
 
 // Create new bank officer
@@ -86,8 +77,8 @@ func PostDeposit(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Response-Desc", "ERROR!!!!! Please Check The Request Payload")
 		w.WriteHeader(http.StatusBadRequest)
 	} else {
+		// Produce message
 		c.ProduceMessage(customer)
-
 		//		 Check wheter the customer exists, if so the http status will return status ok otherwise it returns status not found
 		if e := db.Where("user_account = ?", customer.UserAcc).First(&bankUser).Error; e != nil {
 			log.Println("Record Not Found!!!")
@@ -146,7 +137,6 @@ func GetCustomerDepositByAccountNumber(w http.ResponseWriter, r *http.Request) {
 func GetTotalBalanceByAccountNumber(w http.ResponseWriter, r *http.Request) {
 	var results m.Result
 	param := mux.Vars(r)
-	//	if e := db.Table("deposit_account").Select("acc_number, sum(amount) as total").Group("acc_number").Having("acc_number = ? ", param["account_number"]).Scan(&results).Error; e != nil {
 	if e := db.Table("deposit_account").Select("sum(amount) as total").Group("acc_number").Having("acc_number = ? ", param["account_number"]).Scan(&results).Error; e != nil {
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Response-Code", "06")
