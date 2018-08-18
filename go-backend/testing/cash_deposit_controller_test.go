@@ -51,7 +51,7 @@ func TestCreateBankUser(t *testing.T) {
 	request, _ := http.NewRequest("POST", "/cash_deposit/users", bytes.NewBuffer(jsonBankUser))
 	response := httptest.NewRecorder()
 	Router().ServeHTTP(response, request)
-	assert.Equal(t, http.StatusOK, response.Code, "OK response is expected")
+	assert.Equal(t, "00", response.Header().Get("Response-Code"), "00 response code is expected")
 }
 
 // Test get customers deposit

@@ -43,7 +43,7 @@ func SendEmail(userName string, accountNumber string) {
 	mail.toIds = []string{"pratamalucky712@gmail.com", "luckypratama71@yahoo.com"}
 	mail.subject = "Deposit Notification"
 	mail.body = "Hello " + userName + ",\n\nThere is new deposit from account number: " + accountNumber +
-		".\n\nSo now..... Please do the check!!!!!!!!\n\nThanks!!"
+		".\n\nSo now..... Please check!!!!!!!!\n\nThanks!!"
 
 	messageBody := mail.BuildMessage()
 
@@ -51,7 +51,7 @@ func SendEmail(userName string, accountNumber string) {
 
 	log.Println(smtpServer.host)
 	// Setup auth
-	auth := smtp.PlainAuth("leazzyanalytics@gmail.com", mail.senderId, "indonesia1945", smtpServer.host)
+	auth := smtp.PlainAuth("leazzyanalytics@gmail.com", mail.senderId, "testpassword", smtpServer.host)
 
 	// Gmail will reject connection if it's not secure
 	// TLS config

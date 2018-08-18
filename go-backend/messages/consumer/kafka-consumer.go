@@ -1,10 +1,12 @@
-package main
+package consumer
 
 import (
 	mail "cash-deposit/go-backend/email"
 	"cash-deposit/go-backend/models"
 	"encoding/json"
 	"log"
+
+	"sync"
 
 	"github.com/Shopify/sarama"
 	"github.com/jinzhu/gorm"
@@ -23,9 +25,10 @@ var e error
 var deposit models.DepositAccount
 var bankUser models.BankUser
 var customer models.Customer
+var wg sync.WaitGroup
 
-func main() {
-	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=postgres sslmode=disable")
+func Consumer() {
+	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
 	if e != nil {
 		log.Fatal(e)
 	}
@@ -35,10 +38,12 @@ func main() {
 	db.Model(&models.Customer{}).AddForeignKey("user_acc", "bank_user(user_account)", "CASCADE", "CASCADE")
 	db.Model(&models.DepositAccount{}).AddForeignKey("acc_number", "customer(account_number)", "CASCADE", "CASCADE")
 
-	consumeMessage()
+	ConsumeMessage()
+
+	wg.Done()
 }
 
-func consumeMessage() {
+func ConsumeMessage() {
 	config := sarama.NewConfig()
 	config.Producer.Partitioner = sarama.NewManualPartitioner
 	config.Consumer.Return.Errors = true
@@ -57,25 +62,31 @@ func consumeMessage() {
 	log.Print("Connected to kafka broker")
 	for m := range partitionConsumer.Messages() {
 
+		log.Println(m.Offset)
+
 		text := string(m.Value)
 		bytes := []byte(text)
 
+		// Decode text
 		json.Unmarshal(bytes, &customer)
+		log.Println(string(bytes))
+		log.Println(customer.UserAcc)
+		userAcc := customer.UserAcc
+		log.Println(userAcc)
 
-		customer = models.Customer{AccountNumber: customer.AccountNumber, CustomerName: customer.CustomerName,
-			UserAcc: customer.UserAcc, DepositAccounts: customer.DepositAccounts}
+		var userBank = models.BankUser{}
 
-		//		if e := db.Debug().Where("user_account=?", customer.UserAcc).Preload("Customers").First(&bankUser).Error; e != nil {
-		//			log.Fatal(e)
-		//		} else {
-		if e := db.Debug().Where("account_number = ?", customer.AccountNumber).First(&customer).Error; e != nil {
-			db.Debug().Create(&customer)
+		if e := db.Debug().Raw("SELECT * FROM bank_user WHERE bank_user.user_account = '" + userAcc + "'").First(&userBank).Error; e != nil {
+			log.Fatal(e)
 		} else {
-			db.Debug().Save(&customer)
+			if e := db.Debug().Where("account_number = ?", customer.AccountNumber).First(&customer).Error; e != nil {
+				db.Debug().Create(&customer)
+			} else {
+				db.Debug().Save(&customer)
+			}
+			log.Println("Deposit executed successfully")
+			mail.SendEmail(bankUser.UserName, customer.AccountNumber)
 		}
-		log.Println("Deposit executed successfully")
-		mail.SendEmail(bankUser.UserName, customer.AccountNumber)
-		//}
-	}
 
+	}
 }
