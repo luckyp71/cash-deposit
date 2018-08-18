@@ -27,7 +27,7 @@ var e error
 var wg sync.WaitGroup
 
 func Consumer() {
-	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
 	if e != nil {
 		log.Fatal(e)
 	}
