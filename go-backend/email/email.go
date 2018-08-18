@@ -50,7 +50,8 @@ func SendEmail(userName string, accountNumber string) {
 	smtpServer := SmtpServer{host: "smtp.gmail.com", port: "465"}
 
 	log.Println(smtpServer.host)
-	// Setup auth
+
+	// Setup auth. Change the email and password with yours
 	auth := smtp.PlainAuth("leazzyanalytics@gmail.com", mail.senderId, "testpassword", smtpServer.host)
 
 	// Gmail will reject connection if it's not secure

@@ -9,8 +9,9 @@ import (
 var wg sync.WaitGroup
 
 func main() {
-	wg.Add(2)
-	go c.Router()
+	wg.Add(1)
 	go consumer.Consumer()
+	go c.Router()
 	wg.Wait()
+
 }

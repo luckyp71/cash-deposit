@@ -25,6 +25,7 @@ var e error
 var deposit models.DepositAccount
 var bankUser models.BankUser
 var customer models.Customer
+
 var wg sync.WaitGroup
 
 func Consumer() {
