@@ -5,16 +5,17 @@
 ### Prerequisite:
 1. Angular 6
 2. Angular Material
+3. Angular CDK
 
 ### Sample UI
 #### User Registration 1:
 <div>
-<img src="./assets/user_registration1.png" height="600pt" width="1800pt"/>
+<img src="./assets/user_registration1.png" height="500pt" width="1800pt"/>
 </div>
 
 #### User Registration 2:
 <div>
-<img src="./assets/user_registration2.png" height="600pt" width="1800pt"/>
+<img src="./assets/user_registration2.png" height="500pt" width="1800pt"/>
 </div>
 
 <!--#### Deposit 1:
