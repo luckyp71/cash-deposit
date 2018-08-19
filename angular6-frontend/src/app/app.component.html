@@ -12,22 +12,45 @@
 
   <mat-drawer mode="side" #sidenav class="side-color mat-elevation-z8">
     <button mat-raised-button color="warn" class="side-button" routerLink="/cash_deposit/registration">
-      <mat-icon color="primary">home</mat-icon>
+      <mat-icon color="primary">person_add</mat-icon>
         User Registration</button>
     <br/>
     <button mat-raised-button color="warn" class="side-button" routerLink="/cash_deposit/deposit">
       <mat-icon color="primary">view_list</mat-icon>
       Deposit</button>
     <br/>
-    <button mat-raised-button color="warn" class="side-button" routerLink="/cash_deposit">
+    <button mat-raised-button color="warn" class="side-button"
+     [matMenuTriggerFor]="submenu">
       <mat-icon color="primary">view_module</mat-icon>
         Transaction History</button>
-    
+    <br/>
+    <mat-menu #submenu="matMenu">
+      <button mat-menu-item routerLink="/cash_deposit">
+          <mat-icon color="primary">people</mat-icon>
+        All Customers
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="customer">
+        <mat-icon color="primary">search</mat-icon>
+        Search Customer(s)
+      </button>
+    </mat-menu>
+
+    <mat-menu #customer="matMenu">
+      <button mat-menu-item routerLink="/cash_deposit/search">
+        <mat-icon color="primary">account_balance_wallet</mat-icon>
+        By Account Number
+      </button>
+      <button mat-menu-item>
+        <mat-icon color="primary" routerLink="/cash_deposit/search">account_box</mat-icon>
+        By Bank Officer's Account
+      </button>
+    </mat-menu>
   </mat-drawer>
   <mat-drawer-content>
 
     <router-outlet></router-outlet>
 
-    <app-messages></app-messages>
+    <!-- <app-messages></app-messages> -->
+
 </mat-drawer-content>
 </mat-drawer-container>

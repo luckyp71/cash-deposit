@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CustomersComponent } from './customers/customers.component';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
@@ -13,6 +13,8 @@ import { DepositService } from './deposit.service';
 import { MessageService } from './message.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { CustomerSearchComponent } from './customer-search/customer-search.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +22,14 @@ import { UserRegistrationComponent } from './user-registration/user-registration
     CustomerDetailComponent,
     DepositComponent,
     MessagesComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    CustomerSearchComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,

@@ -8,3 +8,9 @@
   flex-direction: column;
   margin: inherit;
 }
+
+
+.mat-header-cell{
+  background-color: #f9f9f9;
+  font-size: 12pt;
+}

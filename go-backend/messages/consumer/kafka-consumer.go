@@ -57,7 +57,7 @@ func ConsumeMessage() {
 	for m := range partitionConsumer.Messages() {
 
 		var bankUser = models.BankUser{}
-		var customer models.Customer
+		var customer = models.Customer{}
 
 		log.Println(m.Offset)
 
@@ -69,7 +69,7 @@ func ConsumeMessage() {
 		log.Println(string(bytes))
 		log.Println(customer.UserAcc)
 		userAcc := customer.UserAcc
-		log.Println(userAcc)
+		log.Println(customer.CustomerName)
 
 		if e := db.Debug().Raw("SELECT * FROM bank_user WHERE bank_user.user_account = '" + userAcc + "'").First(&bankUser).Error; e != nil {
 			log.Fatal(e)
@@ -77,7 +77,9 @@ func ConsumeMessage() {
 			if e := db.Debug().Where("account_number = ?", customer.AccountNumber).First(&customer).Error; e != nil {
 				db.Debug().Create(&customer)
 			} else {
-				db.Debug().Save(&customer)
+				db.Debug().Save(&models.Customer{AccountNumber: customer.AccountNumber, CustomerName: customer.CustomerName,
+					UserAcc: customer.UserAcc, DepositAccounts: customer.DepositAccounts})
+				//				db.Debug().Save(&customer)
 			}
 			log.Println("Deposit executed successfully")
 			mail.SendEmail(bankUser.UserName, customer.AccountNumber)

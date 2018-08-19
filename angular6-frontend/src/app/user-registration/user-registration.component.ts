@@ -23,7 +23,7 @@ export class UserRegistrationComponent implements OnInit {
     password = password.trim();
     this.depositService.createBankOfficer({user_account, user_name, password} as BankUser)
       .subscribe(data => {
-        this.router.navigateByUrl("/cash_deposit");
+        this.router.navigateByUrl("/cash_deposit/deposit");
         // this.bankUsers.push(data);
       });
   }

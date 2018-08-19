@@ -1,0 +1,26 @@
+.mat-elevation-z8{
+  margin: 20pt;
+}
+
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  margin: inherit;
+}
+
+
+.btn-insert {
+  margin: 0 auto;
+  max-width: 200pt;
+}
+
+.btn-item{
+  margin-right: 10pt;
+}

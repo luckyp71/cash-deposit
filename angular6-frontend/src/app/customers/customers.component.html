@@ -1,26 +1,42 @@
-
-<div *ngIf="customers">
+<div *ngIf="dataSource">
 <mat-card class="mat-elevation-z8">
 <mat-card-header>
-  <h4>Transaction History of Customers</h4>
-
-
+  <h4>Transaction History</h4>
 </mat-card-header>
 <mat-card-content>
-    <h5>Click on the related customer to view the total balance</h5>
-  <ul class="example-container" *ngFor="let customer of customers" routerLink="/cash_deposit/detail/{{customer.account_number}}">
-      <li><strong>Account Number: </strong>{{customer.account_number}}</li>
-<li><strong>Name: </strong>{{customer.customer_name}}</li>
-<li><strong>Bank Officer (User) Account: </strong> {{customer.user_acc}}</li>
-<ul *ngFor="let deposit_account of customer.deposit_accounts">
-  <li><strong>Trx Number:</strong> {{deposit_account.trx_number}}</li>
-  <li><strong>Amount:</strong> {{deposit_account.amount}}</li>
-  <br/>
-  <hr/>
-</ul>
+  <div class="example-container">
+<mat-table #table [dataSource]="dataSource" >
 
-</ul>
+  <ng-container matColumnDef="position">
+    <mat-header-cell *matHeaderCellDef>No. </mat-header-cell>
+  <mat-cell *matCellDef="let customer; let i = index">{{i+1}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="account_number">
+      <mat-header-cell *matHeaderCellDef> Account Number</mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.account_number}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="customer_name">
+      <mat-header-cell *matHeaderCellDef> Customer Name </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.customer_name}}  </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="user_acc">
+      <mat-header-cell *matHeaderCellDef> Bank Officer Account </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.user_acc}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"
+    (click)="onRowClicked(row.account_number)"></mat-row>
+</mat-table>
+
+<mat-paginator [length]="5" [pageSize]="5" [pageSizeOptions]="[5, 10]">
+ </mat-paginator>
+
+</div>
 </mat-card-content>
 </mat-card>
 </div>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

@@ -6,6 +6,7 @@ import { BankUser } from './bank-user'
 import { Customer } from './customer';
 import { DepositAccount } from './deposit-account';
 import { Result } from './result';
+import { UserAccount } from './user-account';
 import { MessageService } from './message.service';
 
 const httpOptions = {
@@ -55,12 +56,22 @@ export class DepositService {
 }
 
   // Get total balance of customer by account number
-  GetTotalBalanceByAccountNumber(account_number: string): Observable<Result> {
+  getTotalBalanceByAccountNumber(account_number: string): Observable<Result> {
     const url = `${this.depositServiceUrl}/balance/${account_number}`;
     return this.http.get<Result>(url).
       pipe(
         tap(_ => this.log(`Get total balance by account number`)),
       catchError(this.handleError<Result>(`Get total balance by account number`))
+    );
+}
+
+// Get Bank Officer's User account
+  getUserAccount(): Observable<UserAccount[]> {
+   const url = `${this.depositServiceUrl}/users/user_account`;
+   return this.http.get<UserAccount[]>(url)
+    .pipe(
+      tap(_ => this.log(`Get user accunts`)),
+      catchError(this.handleError<UserAccount[]>(`Get user accounts`))
     );
 }
 

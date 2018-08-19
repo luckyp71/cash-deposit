@@ -1,8 +1,10 @@
 <div *ngIf="customer">
+  <!-- Transaction Summary -->
 <mat-card class="mat-elevation-z8">
 <mat-card-header>
-  <h4>Customer Detail</h4>
+  <h4>Transaction Summary</h4>
 </mat-card-header>
+<br/>
 <mat-card-content>
   <div class="example-container">
     <mat-form-field>
@@ -12,14 +14,39 @@
       <input matInput [(ngModel)]="customer.customer_name"  placeholder="Customer Name"/>
     </mat-form-field>
     <mat-form-field>
-      <input matInput [(ngModel)]="customer.user_acc" placeholder="Bank Officer (User) Account"/>
+      <input matInput [(ngModel)]="customer.user_acc" placeholder="Bank Officer Account"/>
     </mat-form-field>
     <span *ngIf="result">
     <mat-form-field>
       <input matInput [(ngModel)]="result.total" placeholder="Total Balance"/>
     </mat-form-field>
   </span>
+      <div class="btn-insert">
+  <button mat-fab class="btn-item" class="btn-back" color="primary" (click)="back()">
+    Back</button>
   </div>
+  </div>
+</mat-card-content>
+</mat-card>
+
+<!-- Transaction Detail -->
+<mat-card class="mat-elevation-z8">
+  <mat-card-header>
+    <h4>Transaction Detail</h4>
+  </mat-card-header>
+  <br/>
+<mat-card-content>
+    <div class="example-container">
+      <mat-list>
+        <mat-list-item *ngFor="let deposit of customer.deposit_accounts">
+          <mat-icon mat-list-icon>account_balance</mat-icon>
+          <p mat-line>Transaction Number: {{deposit.trx_number}}</p>
+
+          <p mat-line>Deposit Amount: {{deposit.amount}} </p>
+                      <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </div>
 </mat-card-content>
 </mat-card>
 </div>

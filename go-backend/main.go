@@ -18,7 +18,7 @@ var wg sync.WaitGroup
 
 func main() {
 
-	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "user=postgres password=pratama dbname=testpassword sslmode=disable")
 	if e != nil {
 		fmt.Println(e)
 	} else {
@@ -30,7 +30,7 @@ func main() {
 	db.Model(&m.Customer{}).AddForeignKey("user_acc", "bank_user(user_account)", "CASCADE", "CASCADE")
 	db.Model(&m.DepositAccount{}).AddForeignKey("acc_number", "customer(account_number)", "CASCADE", "CASCADE")
 
-	wg.Add(1)
+	wg.Add(2)
 	go consumer.Consumer()
 	go c.Router()
 	wg.Wait()

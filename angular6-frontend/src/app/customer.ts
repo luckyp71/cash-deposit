@@ -1,6 +1,6 @@
 import { DepositAccount } from './deposit-account';
 
-export class Customer {
+export interface Customer {
   account_number: string;
   customer_name: string;
   user_acc: string;

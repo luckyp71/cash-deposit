@@ -19,7 +19,7 @@ export class CustomerDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getTHByAccountNumber();
-    this.GetTotalBalanceByAccountNumber();
+    this.getTotalBalanceByAccountNumber();
   }
 
   getTHByAccountNumber(): void {
@@ -28,10 +28,14 @@ export class CustomerDetailComponent implements OnInit {
       .subscribe(data => this.customer = data);
   }
 
-  GetTotalBalanceByAccountNumber(): void {
+  getTotalBalanceByAccountNumber(): void {
     const account_number = this.route.snapshot.paramMap.get('account_number');
-    this.depositService.GetTotalBalanceByAccountNumber(account_number)
+    this.depositService.getTotalBalanceByAccountNumber(account_number)
       .subscribe(data => this.result = data);
+  }
+
+  back(): void {
+    this.location.back();
   }
 
 }
