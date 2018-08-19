@@ -35,12 +35,12 @@
 
 #### Transaction History 1:
 <div>
-<img src="./assets/th0.png" height="500pt" width="1800pt"/>
+<img src="./assets/tr1.png" height="500pt" width="1800pt"/>
 </div>
 
 #### Transaction History 2:
 <div>
-<img src="./assets/tr1.png" height="500pt" width="1800pt"/>
+<img src="./assets/th0.png" height="500pt" width="1800pt"/>
 </div>
 
 #### Transaction History 3:
