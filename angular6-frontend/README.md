@@ -9,12 +9,12 @@
 ### Sample UI
 #### User Registration 1:
 <div>
-<img src="./assets/user_registration1.png" height="1000pt" width="1800pt"/>
+<img src="./assets/user_registration1.png" height="600pt" width="1800pt"/>
 </div>
 
 #### User Registration 2:
 <div>
-<img src="./assets/user_registration2.png" height="1000pt" width="1800pt"/>
+<img src="./assets/user_registration2.png" height="600pt" width="1800pt"/>
 </div>
 
 <!--#### Deposit 1:
