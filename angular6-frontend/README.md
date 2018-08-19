@@ -12,6 +12,7 @@
 <div>
 <img src="./assets/user_registration1.png" height="500pt" width="1800pt"/>
 </div>
+
 #### User Registration 2:
 <div>
 <img src="./assets/user_registration2.png" height="500pt" width="1800pt"/>
