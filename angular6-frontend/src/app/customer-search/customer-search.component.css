@@ -1,0 +1,24 @@
+.example-form {
+  min-width: 150px;
+  max-width: 800pt;
+  width: 100%;
+  margin-top: 10pt;
+  margin-left: 10pt;
+}
+
+.mat-elevation-z8{
+  margin: 10pt;
+}
+
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  margin: inherit;
+}
+
+
+.mat-header-cell{
+  background-color: #f9f9f9;
+  font-size: 12pt;
+}

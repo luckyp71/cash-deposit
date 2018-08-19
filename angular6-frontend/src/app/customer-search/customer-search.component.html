@@ -1,3 +1,67 @@
-<h4>
-  In Progress!
-</h4>
+<form class="example-form">
+  <mat-form-field class="keyword-input">
+    <input matInput #accountNumber placeholder="Account Number"/>
+  </mat-form-field>
+  <button mat-icon-button (click)="getTHByAccountNumber(accountNumber.value)">
+    <mat-icon color="primary" class="btn-search">search</mat-icon>
+  </button>
+</form>
+
+
+<!-- 
+<div class="loading_spinner" [style.display]="loading ? 'block' : 'none'">
+  <mat-progress-bar mode="interminate"></mat-progress-bar>
+  <h4>Please wait......</h4>
+</div>
+
+<div class="mat-elevation-z8" *ngIf="customers">
+  <ul *ngFor="let customer of customers">
+    <li>{{customer.customer_name}}</li>
+  </ul>
+  {{customer.customer_name}}
+</div> -->
+
+
+
+
+<div *ngIf="dataSource">
+<mat-card class="mat-elevation-z8">
+<mat-card-header>
+  <h4>Transaction History</h4>
+</mat-card-header>
+<mat-card-content>
+  <div class="example-container">
+<mat-table #table [dataSource]="dataSource" >
+
+  <ng-container matColumnDef="position">
+    <mat-header-cell *matHeaderCellDef>No. </mat-header-cell>
+  <mat-cell *matCellDef="let customer; let i = index">{{i+1}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="account_number">
+      <mat-header-cell *matHeaderCellDef> Account Number</mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.account_number}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="customer_name">
+      <mat-header-cell *matHeaderCellDef> Customer Name </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.customer_name}}  </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="user_acc">
+      <mat-header-cell *matHeaderCellDef> Bank Officer Account </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.user_acc}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"
+    (click)="onRowClicked(row.account_number)"></mat-row>
+</mat-table>
+
+<mat-paginator [length]="5" [pageSize]="5" [pageSizeOptions]="[5, 10]">
+ </mat-paginator>
+
+</div>
+</mat-card-content>
+</mat-card>
+</div>

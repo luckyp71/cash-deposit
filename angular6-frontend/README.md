@@ -53,6 +53,26 @@
 <img src="./assets/tr4.png" height="500pt" width="1800pt"/>
 </div>
 
+#### Transaction History 5:
+<div>
+<img src="./assets/th1.png" height="500pt" width="1800pt"/>
+</div>
+
+#### Transaction History 6:
+<div>
+<img src="./assets/th2.png" height="500pt" width="1800pt"/>
+</div>
+
+#### Transaction History 7:
+<div>
+<img src="./assets/th3.png" height="500pt" width="1800pt"/>
+</div>
+
+#### Transaction History 8:
+<div>
+<img src="./assets/th4.png" height="500pt" width="1800pt"/>
+</div>
+
 #### Transaction Detail:
 <div>
 <img src="./assets/td1.png" height="500pt" width="1800pt"/>
