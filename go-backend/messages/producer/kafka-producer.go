@@ -11,9 +11,9 @@ import (
 )
 
 const (
-	BROKER1     string = "localhost:9092"
-	BROKER2     string = "localhost:9093"
-	BROKER3     string = "localhost:9094"
+	BROKER1     string = "192.168.77.40:9092"
+	BROKER2     string = "192.168.77.40:9093"
+	BROKER3     string = "192.168.77.40:9094"
 	KAFKA_TOPIC string = "cash_deposit"
 )
 

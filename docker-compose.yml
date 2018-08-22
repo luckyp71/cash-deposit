@@ -1,0 +1,20 @@
+# Since I use docker engine version 18.06.0
+# so that I could use the version 3 of compose file format.
+# In case you use a lower version of docker engine,
+# please check the doc to to specify the right version of file format:
+# https://docs.docker.com/compose/compose-file/compose-versioning/#compatibility-matrix 
+version: '3' 
+services:
+  db:
+   restart: always
+   image: postgres:latest
+   ports:
+    - "5439:5432"
+   environment:
+    POSTGRES_PASSWORD: testpassword
+    POSTGRE_USER: postgres
+    POSTGRES_DB: postgres  
+  web:
+   ports: 
+    - "8080:8080"
+   build: ./go-backend

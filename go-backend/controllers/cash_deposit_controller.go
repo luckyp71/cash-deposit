@@ -23,7 +23,7 @@ var e error
 var wg sync.WaitGroup
 
 func Router() {
-	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "host=192.168.77.40 port=5439 user=postgres password=testpassword dbname=postgres sslmode=disable")
 	if e != nil {
 		fmt.Println(e)
 	}
@@ -46,7 +46,7 @@ func Router() {
 
 // DB Configuration for unit testing
 func DbConfig() {
-	db, e = gorm.Open("postgres", "user=postgres password=testpassword dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "host=192.168.77.40 port=5439 user=postgres password=testpassword dbname=postgres sslmode=disable")
 	if e != nil {
 		fmt.Println(e)
 	} else {
