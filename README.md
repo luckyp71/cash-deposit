@@ -1,5 +1,5 @@
 
-<h1> Cash Deposit App with Go, Apache Kafka, Angular 6, and PostgreSQL </h1>
+<h1> Cash Deposit App with Go, Apache Kafka, Angular 6, PostgreSQL, and Docker </h1>
 
 <div>
 <img src="./assets/Cash_Deposit.png" height="500pt" width="1800pt"/>
