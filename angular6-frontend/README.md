@@ -2,7 +2,7 @@
 
 ### Before run the application you need run "npm install" to get all dependencies needed in the root directory of this angular6-frontend app then just enter command "ng serve" in your terminal and the app is running in port 4200.
 
-### Prerequisite:
+### Prerequisites
 1. Angular 6
 2. Angular Material
 3. Angular CDK
