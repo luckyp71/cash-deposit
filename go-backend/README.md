@@ -4,7 +4,7 @@
 <p>1. Since the project used multi Kafka's brokers, you must create three Kafka brokers with ports 9092, 9093, and 9094 respectively</p>
 <p>2. Create Kafka's topic named cash_deposit</p>
 <p>3. Run those three Kafka's brokers</p>
-<p>4. If you'd like to run the project inside Docker, you could either build then run the image using Docker Compose with commands:</p>
+<p>4. If you'd like to run the project inside Docker, you could either build then run the image using docker-compose or just run the image using docker with the following mechanisms:</p>
 <h4>Mechanism 1: Use the following commands if it's your initial build</h4>
 <p>a. docker-compose up db (the command will run postgres in port 5439 as it's specified inside docker-compose.yml file and please ensure that your postgres's host, port as well as credential are correctly provided on it.)</p>
 <p>b. docker-compose up web (the command will run go-backend app in port 8080, but before run the command, please ensure also that the postgres and email host, port and credentials are correctly provided on kafka-consumer.go, email.go, as well as main.go files)</p>
