@@ -1,4 +1,4 @@
-<h1>RESTful Web Service with GO, Gorilla Mux, GORM, Sarama, and PostgreSQL</h1>
+<h1>RESTful Web Service with GO, Gorilla Mux, GORM, Sarama, PostgreSQL, and Docker</h1>
 
 <h3>Steps to Run Program</h3>
 <p>1. Since the project used multi Kafka's brokers, you must create three Kafka brokers with ports 9092, 9093, and 9094 respectively</p>
