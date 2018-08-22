@@ -11,7 +11,7 @@
 <h4>Mechanism 2: Use the following commands if the image has already built</h4>
 <p>a. docker run -d -p 8080:8080 cashdeposit_web (this is the image name of go-backend app which is built in the mechanism 1)</p>
 <p>b. docker run --name postgres -e POSTGRES_PASSWORD=your_password -d -p 5439:5432 postgres</p>
-<p>4.1. If you don't use docker to run the app, just simply run command: go run main.go file in the root directory of the go-backend app</p>
+<p>4.1. If you don't use docker to run the app, just simply run command: go run main.go in the root directory of the go-backend app</p>
 <p>5. Create bank user by invoking RESTful web service with <a href="./assets/Create Bank User Payload.png"> this payload</a> for example </p> 
 <p>6. Invoke deposit service (If the customer doesn't exist, the service will register the new customer) with <a href="./assets/Deposit Payload.png">this payload</a> for example</p>
 <p>7. Get transaction history of <a href="./assets/Transaction History of Customers Payload.png">customers</a> or <a href="./assets/Transaction History by Account Number.png">related customer</a>.</p> 
