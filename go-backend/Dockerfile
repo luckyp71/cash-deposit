@@ -23,4 +23,5 @@ RUN go get github.com/jinzhu/gorm
 RUN go get github.com/jinzhu/gorm/dialects/postgres
 RUN go get github.com/Shopify/sarama
 
+# Run go-backend app
 CMD ["go", "run", "main.go"]
