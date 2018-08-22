@@ -5,9 +5,13 @@
 <p>2. Create Kafka's topic named cash_deposit</p>
 <p>3. Run those three Kafka's brokers</p>
 <p>4. If you'd like to run the project inside Docker, you could either build then run the image using Docker Compose with commands:</p>
+<p>Mechanism 1: Use the following commands if it's your initial build</p>
 <p>a. docker-compose up db (the command will run postgres in port 5439 as it's specified inside docker-compose.yml file and please ensure that your postgres's host, port as well as credential are correctly provided on it.)</p>
 <p>b. docker-compose up web (the command will run go-backend app in port 8080, but before run the command, please ensure also that the postgres and email host, port and credentials are correctly provided on kafka-consumer.go, email.go, as well as main.go files)</p>
-<p>4.1. If you don't want to use docker to run the app, just simply run the main.go file in the root directory of the go-backend app</p>
+<p>Mechanism 2: Use the following commands if the image has already built<p>
+<p>a. docker run -d -p 8080:8080 cashdeposit_web (this is the image name of go-backend app which is built in the mechanism 1)</p>
+<p>b. docker run --name postgres -e POSTGRES_PASSWORD=your_password -d -p 5439:5432 postgres</p>
+<p>4.1. If you don't use docker to run the app, just simply run command: go run main.go file in the root directory of the go-backend app</p>
 <p>5. Create bank user by invoking RESTful web service with <a href="./assets/Create Bank User Payload.png"> this payload</a> for example </p> 
 <p>6. Invoke deposit service (If the customer doesn't exist, the service will register the new customer) with <a href="./assets/Deposit Payload.png">this payload</a> for example</p>
 <p>7. Get transaction history of <a href="./assets/Transaction History of Customers Payload.png">customers</a> or <a href="./assets/Transaction History by Account Number.png">related customer</a>.</p> 
