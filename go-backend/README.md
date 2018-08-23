@@ -9,7 +9,7 @@
 <p>a. docker-compose up db (the command will run postgres in port 5439 as it's specified inside docker-compose.yml file and please ensure that your postgres's host, port as well as credential are correctly provided on it.)</p>
 <p>b. docker-compose up web (the command will run go-backend app in port 8080, but before run the command, please ensure also that the postgres and email host, port and credentials are correctly provided on kafka-consumer.go, email.go, as well as main.go files)</p>
 <h4>Mechanism 2: Use the following commands if the image has already built</h4>
-<p>a. docker run -d -p 8080:8080 cashdeposit_web (this is the image name of go-backend app which is built in the mechanism 1)</p>
+<p>a. docker run -d -p 8080:8080 cashdeposit_go-backend (this is the image name of go-backend app which is built in the mechanism 1)</p>
 <p>b. docker run --name postgres -e POSTGRES_PASSWORD=your_password -d -p 5439:5432 postgres</p>
 <p>4.1. If you don't use docker to run the app, just simply run command: go run main.go in the root directory of the go-backend app</p>
 <p>5. Create bank user by invoking RESTful web service with <a href="./assets/Create Bank User Payload.png"> this payload</a> for example </p> 

@@ -18,7 +18,7 @@ var wg sync.WaitGroup
 
 func main() {
 
-	db, e = gorm.Open("postgres", "host=192.168.77.40 port=5439 user=postgres password=testpassword dbname=postgres sslmode=disable")
+	db, e = gorm.Open("postgres", "host=192.168.43.237 port=5439 user=postgres password=testpassword dbname=postgres sslmode=disable")
 	if e != nil {
 		fmt.Println(e)
 	} else {

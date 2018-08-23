@@ -17,7 +17,7 @@ const httpOptions = {
 export class DepositService {
 
   // Service Base Path
-  private depositServiceUrl = "http://localhost:8080/cash_deposit";
+  private depositServiceUrl = "http://192.168.43.237:8080/cash_deposit";
 
   constructor(private http: HttpClient,
               private messageService: MessageService) { }

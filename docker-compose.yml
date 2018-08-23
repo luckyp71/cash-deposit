@@ -14,7 +14,11 @@ services:
     POSTGRES_PASSWORD: testpassword
     POSTGRE_USER: postgres
     POSTGRES_DB: postgres  
-  web:
+  go-backend:
    ports: 
     - "8080:8080"
    build: ./go-backend
+  angular6-frontend:
+   ports:
+    - "4200:4200"
+   build: ./angular6-frontend
