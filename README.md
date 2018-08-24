@@ -9,15 +9,15 @@
 <p>1. Run <strong>docker-compose up -d</strong> command in cash-deposit root directory</p>
 <p>If everything goes well, the command will create and run cash-deposit with angular6-frontend and go-docker tags images as well as run postgres image below:</p> 
 <div>
-<img src="./assets/docker-compose-up.png" height="300pt" width="1000pt"/>
+<img src="./assets/docker-compose-up.png" height="300pt" width="700pt"/>
 </div>
 <p>2. Now you may check that those three app are running in docker container</p>
 <div>
-<img src="./assets/docker-ps.png" height="300pt" width="1000pt"/>
+<img src="./assets/docker-ps.png" height="300pt" width="700pt"/>
 </div>
 <p>3. To stop and remove those three running containers, you could simply run <strong>docker-compose down</strong></p>
 <div>
-<img src="./assets/docker-compose-down.png" height="300pt" width="1000pt"/>
+<img src="./assets/docker-compose-down.png" height="300pt" width="700pt"/>
 </div>
 
 <h3> Use Cases: </h3>
