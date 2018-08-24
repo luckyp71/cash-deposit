@@ -12,7 +12,7 @@
 <div>
 <img src="./assets/docker-compose-up.png" height="300pt" width="600pt"/>
 </div>
-<p>3. Now you may check that those three app are running in docker container</p>
+<p>3. Now you may check that those three apps are running as docker container</p>
 <div>
 <img src="./assets/docker-ps.png" height="300pt" width="600pt"/>
 </div>
