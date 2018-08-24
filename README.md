@@ -6,18 +6,19 @@
 </div>
 
 <h3>Steps to Run and Stop the Program</h3>
-<p>1. Run <strong>docker-compose up -d</strong> command in cash-deposit root directory</p>
+<p>1. Run step 1 until 3 <a href="./go-backend/README.md">here</p>
+<p>2. Run <strong>docker-compose up -d</strong> command in cash-deposit root directory</p>
 <p>If everything goes well, the command will create and run cash-deposit with angular6-frontend and go-docker tags images as well as run postgres image below:</p> 
 <div>
-<img src="./assets/docker-compose-up.png" height="300pt" width="700pt"/>
+<img src="./assets/docker-compose-up.png" height="300pt" width="600pt"/>
 </div>
-<p>2. Now you may check that those three app are running in docker container</p>
+<p>3. Now you may check that those three app are running in docker container</p>
 <div>
-<img src="./assets/docker-ps.png" height="300pt" width="700pt"/>
+<img src="./assets/docker-ps.png" height="300pt" width="600pt"/>
 </div>
-<p>3. To stop and remove those three running containers, you could simply run <strong>docker-compose down</strong></p>
+<p>4. To stop and remove those three running containers, you could simply run <strong>docker-compose down</strong></p>
 <div>
-<img src="./assets/docker-compose-down.png" height="300pt" width="700pt"/>
+<img src="./assets/docker-compose-down.png" height="300pt" width="600pt"/>
 </div>
 
 <h3> Use Cases: </h3>
