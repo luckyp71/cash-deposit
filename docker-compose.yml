@@ -18,6 +18,10 @@ services:
    ports: 
     - "8080:8080"
    build: ./go-backend
+   depends_on:
+    - db
+   links:
+    - db
   angular6-frontend:
    ports:
     - "4200:4200"

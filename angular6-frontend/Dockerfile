@@ -18,7 +18,9 @@ COPY package.json /go/src/cash-deposit/angular6-frontend
 
 # Install dependencies using npm
 RUN npm install
+RUN npm audit fix                   
 RUN npm install -g @angular/cli
+              
 
 #Build the app
 RUN npm run build
