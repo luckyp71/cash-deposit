@@ -11,7 +11,7 @@ services:
    ports:
     - "5439:5432"
    environment:
-    POSTGRES_PASSWORD: testpassword
+    POSTGRES_PASSWORD: pratama
     POSTGRE_USER: postgres
     POSTGRES_DB: postgres  
   go-backend:
