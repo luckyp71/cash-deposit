@@ -15,16 +15,14 @@ services:
     POSTGRE_USER: postgres
     POSTGRES_DB: postgres  
   go-backend:
+   image: cashdeposit_go-backend:dev
    ports: 
     - "8080:8080"
-   build: ./go-backend
-   image: cashdeposit_go-backend:dev
    depends_on:
     - db
    links:
     - db
   angular6-frontend:
+   image: cashdeposit_angular6-frontend:dev
    ports:
     - "4200:4200"
-   build: ./angular6-frontend
-   image: cashdeposit_angular6-frontend:dev

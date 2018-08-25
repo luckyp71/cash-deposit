@@ -1,5 +1,5 @@
 
-<h1> Cash Deposit App with Go, Apache Kafka, Angular 6, PostgreSQL, and Docker </h1>
+<h1> Cash Deposit App with Go, Apache Kafka, Angular 6, PostgreSQL, Docker, and Kubernetes </h1>
 
 <div>
 <img src="./assets/Cash_Deposit.png" height="500pt" width="1800pt"/>
@@ -8,7 +8,7 @@
 <h3>Steps to Run and Stop the Program</h3>
 <p>1. Run step 1 until 3 <a href="./go-backend/README.md">here</a></p>
 <p>2. Run <strong>docker-compose up -d</strong> command in cash-deposit root directory</p>
-<p>If everything goes well, the command will create and run cash-deposit with angular6-frontend and go-docker tags images as well as run postgres image below:</p> 
+<p>If everything goes well, the command will create and run cashdeposit_angular6-frontend and cash_deposit_go-docker images as well as run postgres image below:</p> 
 <div>
 <img src="./assets/docker-compose-up.png" height="300pt" width="600pt"/>
 </div>
@@ -20,6 +20,7 @@
 <div>
 <img src="./assets/docker-compose-down.png" height="300pt" width="600pt"/>
 </div>
+<p>5. After these three images are created and you'd like to deploy them to kubernetes, you could do the following <a href="./kubernetes/README.md">example</a></p>
 
 <h3> Use Cases: </h3>
 <h4>Customer:</h4>
