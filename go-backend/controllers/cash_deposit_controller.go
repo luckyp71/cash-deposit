@@ -37,9 +37,9 @@ func Router() {
 	sub.HandleFunc("/balance/{account_number}", GetTotalBalanceByAccountNumber).Methods("GET")
 	sub.HandleFunc("/detail/{account_number}", GetCustomerDepositByAccountNumber).Methods("GET")
 	sub.HandleFunc("/users/user_account", GetBankUserAccount).Methods("GET")
-	log.Fatal(http.ListenAndServe(":8080", handlers.CORS(handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization"}),
+	http.ListenAndServe(":8080", handlers.CORS(handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization"}),
 		handlers.AllowedMethods([]string{"GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS"}),
-		handlers.AllowedOrigins([]string{"*"}))(sub)))
+		handlers.AllowedOrigins([]string{"*"}))(sub))
 
 	wg.Done()
 }

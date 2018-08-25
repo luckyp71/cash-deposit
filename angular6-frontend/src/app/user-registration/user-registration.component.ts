@@ -10,7 +10,6 @@ import { Customer } from '../customer';
   styleUrls: ['./user-registration.component.css']
 })
 export class UserRegistrationComponent implements OnInit {
-  // bankUsers: BankUser[] = [];
   constructor(private depositService: DepositService,
               private router: Router) { }
 
@@ -22,10 +21,7 @@ export class UserRegistrationComponent implements OnInit {
     user_name = user_name.trim();
     password = password.trim();
     this.depositService.createBankOfficer({user_account, user_name, password} as BankUser)
-      .subscribe(data => {
-        this.router.navigateByUrl("/cash_deposit/deposit");
-        // this.bankUsers.push(data);
-      });
+      .subscribe(()=> this.router.navigateByUrl("/cash_deposit/deposit"))
   }
 
 }

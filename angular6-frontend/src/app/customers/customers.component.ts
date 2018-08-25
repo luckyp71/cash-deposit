@@ -26,6 +26,7 @@ export class CustomersComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.getCustomersTrasactionHistory();
     this.dataSource.paginator = this.paginator;
   }
 
@@ -33,7 +34,7 @@ export class CustomersComponent implements OnInit, AfterViewInit {
   getCustomersTrasactionHistory(): void {
     this.depositService.getCustomersTrasactionHistory()
       .subscribe(data => {
-        this.customers = data
+        this.customers = data;
         this.dataSource = new MatTableDataSource(this.customers);
         this.dataSource.paginator = this.paginator;
       });

@@ -1,0 +1,150 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kompose.cmd: kompose convert -f docker-compose.yml -o cash-deposit.yml
+      kompose.version: 1.16.0 ()
+    creationTimestamp: null
+    labels:
+      io.kompose.service: angular6-frontend
+    name: angular6-frontend
+  spec:
+    ports:
+    - name: "4200"
+      port: 4200
+      targetPort: 4200
+    selector:
+      io.kompose.service: angular6-frontend
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kompose.cmd: kompose convert -f docker-compose.yml -o cash-deposit.yml
+      kompose.version: 1.16.0 ()
+    creationTimestamp: null
+    labels:
+      io.kompose.service: db
+    name: db
+  spec:
+    ports:
+    - name: "5439"
+      port: 5439
+      targetPort: 5432
+    selector:
+      io.kompose.service: db
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kompose.cmd: kompose convert -f docker-compose.yml -o cash-deposit.yml
+      kompose.version: 1.16.0 ()
+    creationTimestamp: null
+    labels:
+      io.kompose.service: go-backend
+    name: go-backend
+  spec:
+    ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
+    selector:
+      io.kompose.service: go-backend
+  status:
+    loadBalancer: {}
+- apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: kompose convert -f docker-compose.yml -o cash-deposit.yml
+      kompose.version: 1.16.0 ()
+    creationTimestamp: null
+    labels:
+      io.kompose.service: angular6-frontend
+    name: angular6-frontend
+  spec:
+    replicas: 1
+    strategy: {}
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          io.kompose.service: angular6-frontend
+      spec:
+        containers:
+        - image: cashdeposit_angular6-frontend:dev
+          name: angular6-frontend
+          ports:
+          - containerPort: 4200
+          resources: {}
+        restartPolicy: Always
+  status: {}
+- apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: kompose convert -f docker-compose.yml -o cash-deposit.yml
+      kompose.version: 1.16.0 ()
+    creationTimestamp: null
+    labels:
+      io.kompose.service: db
+    name: db
+  spec:
+    replicas: 1
+    strategy: {}
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          io.kompose.service: db
+      spec:
+        containers:
+        - env:
+          - name: POSTGRES_DB
+            value: postgres
+          - name: POSTGRES_PASSWORD
+            value: testpassword
+          - name: POSTGRE_USER
+            value: postgres
+          image: postgres:latest
+          name: db
+          ports:
+          - containerPort: 5432
+          resources: {}
+        restartPolicy: Always
+  status: {}
+- apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    annotations:
+      kompose.cmd: kompose convert -f docker-compose.yml -o cash-deposit.yml
+      kompose.version: 1.16.0 ()
+    creationTimestamp: null
+    labels:
+      io.kompose.service: go-backend
+    name: go-backend
+  spec:
+    replicas: 1
+    strategy: {}
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          io.kompose.service: go-backend
+      spec:
+        containers:
+        - image: cashdeposit_go-backend:dev
+          name: go-backend
+          ports:
+          - containerPort: 8080
+          resources: {}
+        restartPolicy: Always
+  status: {}
+kind: List
+metadata: {}
+

@@ -39,10 +39,7 @@ export class DepositComponent implements OnInit {
       {trx_number: `${trx_number}`, amount: amount, acc_number: ''}
     ]
     this.depositService.postDeposit({account_number, customer_name, user_acc, deposit_accounts} as Customer)
-      .subscribe(data => {
-        this.customers.push(data);
-        this.router.navigateByUrl("/cash_deposit");
-      })
+      .subscribe(()=> this.router.navigateByUrl("/cash_deposit"))
   }
 
   private _filter(value: string): string[] {
